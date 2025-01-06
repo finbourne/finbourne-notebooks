@@ -5,11 +5,6 @@ This repository contains Jupyter notebooks that show how to use [LUSID](https://
 * `features` - Notebooks showing specific LUSID features. These notebooks are short and specific.
 * `use-cases` - Notebooks showing sample business implementations or use-cases. These notebooks will combine various LUSID features to solve a business use-case. The `use-case` notebooks are generally longer than the `features` ones.
 
-## V1/analytics/FX
-| filename | title | description | features |
-| --- | --- | --- | --- |
-| [fx-forward-pricing-models.ipynb](<V1/analytics/FX/fx-forward-pricing-models.ipynb>) | FX Forward Pricing Models |  | FX Forwards, Pricing Models, Valuation |
-| [fx-inference-triangulation.ipynb](<V1/analytics/FX/fx-inference-triangulation.ipynb>) | FX Inference Triangulation |  | FX, FX inference, Foreign Exchange, Triangulation |
 
 ## V1/engineering-best-practises
 | filename | title | description | features |
@@ -53,6 +48,8 @@ This repository contains Jupyter notebooks that show how to use [LUSID](https://
 | [Equity Options - Pricing and risk using Black-Scholes.ipynb](<V1/features/instruments/Equity Options - Pricing and risk using Black-Scholes.ipynb>) | Equity Option - Pricing and risk |  | black scholes, equity option, exposure, inline valuations, market value, option delta |
 | [FX Forward.ipynb](<V1/features/instruments/FX Forward.ipynb>) | FX Forward - Valuation Workflow |  | FX Forwards, complex market data, recipes, valuations |
 | [Funding Leg Swap.ipynb](<V1/features/instruments/Funding Leg Swap.ipynb>) | Variable Funding Leg + Equity or Cash Instrument | Demonstrates creation and pricing of a funding leg with <br>variable notional and constructing a related position in<br>an stock or underlying instrument. This construct can be used<br>to represent the mechanics of a total return or equity swap. | aggregation, funding leg swap, instruments, market data store, quotes, results store |
+| [fx-forward-pricing-models.ipynb](<V1/features/instruments/fx-forward-pricing-models.ipynb>) | FX Forward Pricing Models |  | FX Forwards, Pricing Models, Valuation |
+| [fx-inference-triangulation.ipynb](<V1/features/instruments/fx-inference-triangulation.ipynb>) | FX Inference Triangulation |  | FX, FX inference, Foreign Exchange, Triangulation |
 | [Interest Rate Swap.ipynb](<V1/features/instruments/Interest Rate Swap.ipynb>) | Interest Rate Swap Valuation | Demonstrates pricing of an Interest Rate Swap based on a user defined Instrument. | instruments, lifecycle events, market data store, quotes, results store, valuation |
 | [Mortgage Backed Securities.ipynb](<V1/features/instruments/Mortgage Backed Securities.ipynb>) | Mortgage Backed Securities in LUSID |  | complex bond, mbs, mortgage backed securities, pool factor, schedule |
 | [Simple Equity.ipynb](<V1/features/instruments/Simple Equity.ipynb>) | Equity - Computing P&amp;L and Handling Dividends for Equities |  | P&amp;L, dividend, equity, recipes, valuations |
