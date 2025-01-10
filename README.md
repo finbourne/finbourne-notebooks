@@ -5,6 +5,55 @@ This repository contains Jupyter notebooks that show how to use [LUSID](https://
 * `features` - Notebooks showing specific LUSID features. These notebooks are short and specific.
 * `use-cases` - Notebooks showing sample business implementations or use-cases. These notebooks will combine various LUSID features to solve a business use-case. The `use-case` notebooks are generally longer than the `features` ones.
 
+# V2
+
+## V2/product/abor
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [Generate a Trial Balance (using Luminesce).ipynb](<V2/product/abor/Generate a Trial Balance (using Luminesce).ipynb>) | Generate a trial balance | Demonstrates how to setup LUSID to run a trial balance on a portfolio using Luminesce.  | abor, trial balance, transaction types, luminesce |
+
+
+
+## V2/university/T00000-Using-Python-with-LUSID
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [Basic Python scripting.ipynb](<V2/university/T00000-Using-Python-with-LUSID/Basic Python scripting.ipynb>) | Basic Python scripting | An introduction to Python and writing some Python code.  | python, variables, types, loops, functions, classes, objects, libraries |
+| [Using NumPy to efficiently work with large, multi-dimensional data.ipynb](<V2/university/T00000-Using-Python-with-LUSID/Using NumPy to efficiently work with large, multi-dimensional data.ipynb>) | Using NumPy to efficiently work with large, multi-dimensional data | An introduction to NumPy and processing multi-dimensional arrays.  | python, numpy, arrays, vectorised operations |
+| [Using Pandas to work with DataFrames.ipynb](<V2/university/T00000-Using-Python-with-LUSID/Using Pandas to work with DataFrames.ipynb>) | Using Pandas to work with DataFrames | An introduction to the widely-used pandas library.  | python, pandas, dataframes |
+| [Using the FINBOURNE Python SDKs.ipynb](<V2/university/T00000-Using-Python-with-LUSID/Using the FINBOURNE Python SDKs.ipynb>) | Using the FINBOURNE Python SDKs | An introduction to the FINBOURNE Python SDKs and tools for interacting with LUSID in our hosted Jupyter environment.  | python, sdk, Jupyter |
+| [What are Python and Jupyter_.ipynb](<V2/university/T00000-Using-Python-with-LUSID/What are Python and Jupyter_.ipynb>) | What are Python and Jupyter? | An introduction to Python and Jupyter, which are commonly used to view and analyse data using short Python scripts.  | python, Jupyter Notebooks |
+
+## V2/university/T01001-LUSID-core-concepts
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T01001-LUSID-core-concepts.ipynb](<V2/university/T01001-LUSID-core-concepts/T01001-LUSID-core-concepts.ipynb>) | LUSID core concepts | Creating a portfolio containing equities, bonds and cash, trading positions, and viewing daily asset allocation.  | portfolios, instruments, transactions, holdings, valuation, market data |
+
+## V2/university/T01002-Creating-an-instrument-master
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T01002-Creating-an-instrument-master.ipynb](<V2/university/T01002-Creating-an-instrument-master/T01002-Creating-an-instrument-master.ipynb>) | Creating an instrument master | Populating the LUSID instrument master from different data sources.  | portfolios, instruments, identifiers, data lineage |
+
+## V2/university/T01003-Setting-up-a-transaction-portfolio-with-strategies
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T01003-Setting-up-a-transaction-portfolio-with-strategies.ipynb](<V2/university/T01003-Setting-up-a-transaction-portfolio-with-strategies/T01003-Setting-up-a-transaction-portfolio-with-strategies.ipynb>) | Setting up a transaction portfolio with strategies | Load transactions from two systems into separate investment strategies and calculate holdings grouped by strategy on trade date vs settlement date.  | portfolios, instruments, transactions, holdings |
+
+## V2/university/T01005-Basic-portfolio-valuation
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T01005-Basic-portfolio-valuation.ipynb](<V2/university/T01005-Basic-portfolio-valuation/T01005-Basic-portfolio-valuation.ipynb>) | Basic portfolio valuation | Populating the LUSID instrument master from different data sources.  | portfolios, instruments, identifiers, data lineage |
+
+## V2/university/T01006-Introduction-to-transaction-configuration
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T01006-Breaking-out-broker-commission-as-a-separate-cash-holding.ipynb](<V2/university/T01006-Introduction-to-transaction-configuration/T01006-Breaking-out-broker-commission-as-a-separate-cash-holding.ipynb>) | Breaking out broker commission as a separate cash holding | Create a holdings report that breaks out money paid in broker commissions on equity purchases into a separate cash holding.  | properties, property definitions, SHKs |
+| [T01006-Ensuring-different-transaction-codes-have-the-same-economic-impact.ipynb](<V2/university/T01006-Introduction-to-transaction-configuration/T01006-Ensuring-different-transaction-codes-have-the-same-economic-impact.ipynb>) | Ensuring different transaction codes have the same economic impact | Load transactions from different systems which use different transaction codes for the same economic activity and have LUSID apply a uniform economic impact when generating holdings.  | transactions, aliases, holdings |
+| [T01006-Ensuring-the-same-transaction-code-has-different-economic-impacts.ipynb](<V2/university/T01006-Introduction-to-transaction-configuration/T01006-Ensuring-the-same-transaction-code-has-different-economic-impacts.ipynb>) | Ensuring the same transaction code has different economic impacts | Load transactions from different systems which use the same  transaction code for the different economic activities and have LUSID apply the correct economic impact for each transaction when generating holdings. | transactions, aliases, holdings |
+| [T01006-Reducing-the-cash-balance-by-the-cost-of-broker-commission.ipynb](<V2/university/T01006-Introduction-to-transaction-configuration/T01006-Reducing-the-cash-balance-by-the-cost-of-broker-commission.ipynb>) | Reducing the cash balance by the cost of broker commission | Creating custom transaction types to reduce cash balance by money paid out in broker commissions as well as the cost of equities purchased. | properties, property definitions, SHKs |
+
+
+
+# V1
 
 ## V1/engineering-best-practises
 | filename | title | description | features |
