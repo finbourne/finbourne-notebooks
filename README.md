@@ -51,6 +51,56 @@ This repository contains Jupyter notebooks that show how to use [LUSID](https://
 | [T01006-Ensuring-the-same-transaction-code-has-different-economic-impacts.ipynb](<V2/university/T01006-Introduction-to-transaction-configuration/T01006-Ensuring-the-same-transaction-code-has-different-economic-impacts.ipynb>) | Ensuring the same transaction code has different economic impacts | Load transactions from different systems which use the same  transaction code for the different economic activities and have LUSID apply the correct economic impact for each transaction when generating holdings. | transactions, aliases, holdings |
 | [T01006-Reducing-the-cash-balance-by-the-cost-of-broker-commission.ipynb](<V2/university/T01006-Introduction-to-transaction-configuration/T01006-Reducing-the-cash-balance-by-the-cost-of-broker-commission.ipynb>) | Reducing the cash balance by the cost of broker commission | Creating custom transaction types to reduce cash balance by money paid out in broker commissions as well as the cost of equities purchased. | properties, property definitions, SHKs |
 
+## V2/university/T02002-Luminesce-syntax
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [Luminesce Syntax.ipynb](<V2/university/T02002-Luminesce-syntax/Luminesce Syntax.ipynb>) | Luminesce syntax | An introduction to using Luminesce SQL.  | Luminesce, sql, query, providers |
+
+## V2/university/T02003-Luminesce-Providers-and-Views
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [Providers and Views.ipynb](<V2/university/T02003-Luminesce-Providers-and-Views/Providers and Views.ipynb>) | Providers and views | An introduction to using Luminesce read and write data providers, direct providers, and creating your own custom views.  | Luminesce, data provider, direct provider, writer, custom view  |
+
+## V2/university/T09001-EventsAndNotifications-WhatAreEvents
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T09001-EventsAndNotifications-WhatAreEvents.ipynb](<V2/university/T09001-EventsAndNotifications-WhatAreEvents/T09001-EventsAndNotifications-WhatAreEvents.ipynb>) | Events and Notifications: What are events? | An introduction to events and event types in the Notification Service | notifications, events, subscriptions |
+
+## V2/university/T09002-EventsAndNotifications-SubscribingToEvents
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T09002-EventsAndNotifications-SubscribingToEvents.ipynb](<V2/university/T09002-EventsAndNotifications-SubscribingToEvents/T09002-EventsAndNotifications-SubscribingToEvents.ipynb>) | Events and Notifications: Subscribing to events | An introduction to subscriptions and using the Notification API to subscribe to an event.   | notifications, events, subscriptions, filtering |
+
+## V2/university/T09003-EventsAndNotifications-SendingNotifications
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T09003-EventsAndNotifications-SendingNotifications.ipynb](<V2/university/T09003-EventsAndNotifications-SendingNotifications/T09003-EventsAndNotifications-SendingNotifications.ipynb>) | Events and Notifications: Sending notifications | An introduction to setting up email and SMS notifications using the Notification API.  | notifications, events, email, SMS |
+
+## V2/university/T09004-EventsAndNotifications-SendingWebhooks
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T09004-EventsAndNotifications-SendingWebhooks.ipynb](<V2/university/T09004-EventsAndNotifications-SendingWebhooks/T09004-EventsAndNotifications-SendingWebhooks.ipynb>) | Events and Notifications: Sending webhooks | An introduction to setting up internal and external webhooks using the Notification API.  | notifications, events, webhook |
+
+## V2/university/T12002-Properties-DefiningProperties
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T12002-Properties-DefiningProperties.ipynb](<V2/university/T12002-Properties-DefiningProperties/T12002-Properties-DefiningProperties.ipynb>) | Defining properties | An introduction to creating properties in LUSID.  | property, property definition, data types |
+
+## V2/university/T12003-Properties-PopulatingPerpetualPropertyValues
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T12003-Properties-PopulatingPerpetualPropertyValues.ipynb](<V2/university/T12003-Properties-PopulatingPerpetualPropertyValues/T12003-Properties-PopulatingPerpetualPropertyValues.ipynb>) | Populating perpetual property values | An introduction to creating perpetual properties and decorating a value on an entity.  | property, property definition, perpetual property |
+
+## V2/university/T12004-Properties-PopulatingTimeVariantPropertyValues
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T12004-Properties-PopulatingTimeVariantPropertyValues.ipynb](<V2/university/T12004-Properties-PopulatingTimeVariantPropertyValues/T12004-Properties-PopulatingTimeVariantPropertyValues.ipynb>) | Populating time-variant property values | An introduction to creating time-variant properties and decorating a value on an entity.  | property, property definition, perpetual property |
+
+## V2/university/T12005-Properties-ViewingAPropertysHistory
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T12004-Properties-PopulatingTimeVariantPropertyValues.ipynb](<V2/university/T12005-Properties-ViewingAPropertysHistory/T12005-Properties-ViewingAPropertysHistory.ipynb>) | Viewing a property's history | An introduction to viewing the bitemporal history of a property value.  | property value, bitemporality, asAt, effectiveAt |
+
 
 
 # V1
