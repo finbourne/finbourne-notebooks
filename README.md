@@ -12,7 +12,10 @@ This repository contains Jupyter notebooks that show how to use [LUSID](https://
 | --- | --- | --- | --- |
 | [Generate a Trial Balance (using Luminesce).ipynb](<V2/product/abor/Generate a Trial Balance (using Luminesce).ipynb>) | Generate a trial balance | Demonstrates how to setup LUSID to run a trial balance on a portfolio using Luminesce.  | abor, trial balance, transaction types, luminesce |
 
-
+## V2/product/compliance
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [Configuring and Running Pre-Trade Compliance.ipynb](<V2/product/compliance/Configuring and Running Pre-Trade Compliance.ipynb>) | Run pre-trade compliance | Demonstrates how to define and run some simple compliance rules, and the effect of orders and transactions on the outcome. | ibor, compliance, orders |
 
 ## V2/university/T00000-Using-Python-with-LUSID
 | filename | title | description | features |
