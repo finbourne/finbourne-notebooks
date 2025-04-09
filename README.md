@@ -104,6 +104,11 @@ This repository contains Jupyter notebooks that show how to use [LUSID](https://
 | --- | --- | --- | --- |
 | [T12004-Properties-PopulatingTimeVariantPropertyValues.ipynb](<V2/university/T12005-Properties-ViewingAPropertysHistory/T12005-Properties-ViewingAPropertysHistory.ipynb>) | Viewing a property's history | An introduction to viewing the bitemporal history of a property value.  | property value, bitemporality, asAt, effectiveAt |
 
+## V2/features/identity
+| filename                                                                        | title                | description                                                          | features |
+|---------------------------------------------------------------------------------|----------------------|----------------------------------------------------------------------|----------|
+| [Get Okta System Logs.ipynb](<V2/features/identity/Get Okta System Logs.ipynb>) | Get Okta System Logs | Demonstrates how to retrieve Okta System Logs using the Identity SDK | identity |
+
 
 
 # V1
