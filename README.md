@@ -169,11 +169,6 @@ This repository contains Jupyter notebooks that show how to use [LUSID](https://
 | [Futures Valuation with notional cost and variation margin.ipynb](<V1/features/instruments/Futures Valuation with notional cost and variation margin.ipynb>) | Futures Valuation Workflow |  | futures, recipes, transaction types, valuations |
 | [Total Return Swap Pricing With Reference Instrument.ipynb](<V1/features/instruments/Total Return Swap Pricing With Reference Instrument.ipynb>) | Total Return Swap Pricing With Reference Instrument | Demonstrates pricing of an Total Return Swap with AssetLeg having the ReferenceInstrument as underlying. | instruments, reference-instrument, valuation |
 
-## V1/features/workflow
-| filename | title | description | features |
-| --- | --- | --- | --- |
-| [Call Api On File Upload.ipynb](<V1/features/workflow/Call Api On File Upload.ipynb>) | Call Api on File Upload |  | events, luminesce, notifications, subscriptions |
-
 ## V1/product/abor
 | filename | title | description | features |
 | --- | --- | --- | --- |
