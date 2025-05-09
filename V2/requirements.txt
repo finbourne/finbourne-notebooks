@@ -1,0 +1,26 @@
+lusid-sdk>=2
+lusid-configuration-sdk>=2
+lusid-notifications-sdk>=2
+lusid-scheduler-sdk>=2
+lusid-workflow-sdk>=2
+lusid-drive-sdk>=2
+
+finbourne-access-sdk>=2
+finbourne-identity-sdk>=2
+finbourne-insights-sdk>=2
+
+lumipy>=1.0.38 # Lumipy will install the correct Luminesce SDK
+
+finbourne-sdk-utils>=0.0.27
+lusid-jam>=0.1.2
+
+openpyxl==3.1.5
+seaborn==0.11.2
+backoff==2.1.2
+psutil==5.8.0
+rise==5.7.1
+
+ipython==8.32
+typing-extensions>=4.8.0
+# Needed due to https://github.com/jupyterlab/jupyterlab/issues/12977#issuecomment-1221309124
+ipywidgets>8

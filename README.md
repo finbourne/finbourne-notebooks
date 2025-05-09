@@ -7,6 +7,20 @@ This repository contains Jupyter notebooks that show how to use [LUSID](https://
 
 # V2
 
+## Installing Requirements for V2 Notebooks
+
+This project includes a `requirements.txt` file for running V2 notebooks locally: [V2/requirements.txt](<V2/requirements.txt>)
+
+### Steps
+
+1. **(Optional but Recommended)** Create and activate a virtual environment:
+
+   ```bash
+   python -m venv name-of-your-venv
+
+2. Install dependencies with ```pip install -r V2/requirements.txt```
+
+
 ## V2/product/abor
 | filename | title | description | features |
 | --- | --- | --- | --- |
@@ -178,11 +192,6 @@ This repository contains Jupyter notebooks that show how to use [LUSID](https://
 | [Identifying Downstream Consumers affected by Backdated Corrections on a Locked Reporting Window.ipynb](<V1/product/abor/Identifying Downstream Consumers affected by Backdated Corrections on a Locked Reporting Window.ipynb>) | Identifying backdated corrections | Demonstration of how to identify backdated corrections and their impact | build transaction, cocoon - seed_data, insights, portfolio changes |
 | [Maintain a fund in multiple currencies and share classes.ipynb](<V1/product/abor/Maintain a fund in multiple currencies and share classes.ipynb>) | Modelling share classes in LUSID | This notebook shows how to model a fund that operates in different currencies and share classes. | adjust holdings, aggregation, holdings, instrument definitions, quotes, transactions |
 | [Creating Portfolios With Different Tax Lot Management Methods.ipynb](<V1/product/abor/Creating Portfolios With Different Tax Lot Management Methods.ipynb>) | Creating portfolios with different tax lot management methods | This notebook demonstrates how to create transaction portfolios under different tax lot accounting methodologies. | accounting, corporate actions, holdings, taxlots, transactions |
-
-## V1/product/compliance
-| filename | title | description | features |
-| --- | --- | --- | --- |
-| [Configuring and Running Pre-Trade Compliance.ipynb](<V1/product/compliance/Configuring and Running Pre-Trade Compliance.ipynb>) | Compliance in LUSID |  | Compliance, OMS, Pre/Post trade checks |
 
 ## V1/product/edm
 | filename | title | description | features |
