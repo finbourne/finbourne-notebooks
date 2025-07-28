@@ -98,6 +98,31 @@ This project includes a `requirements.txt` file for running V2 notebooks locally
 | --- | --- | --- | --- |
 | [T09004-EventsAndNotifications-SendingWebhooks.ipynb](<V2/university/T09004-EventsAndNotifications-SendingWebhooks/T09004-EventsAndNotifications-SendingWebhooks.ipynb>) | Events and Notifications: Sending webhooks | An introduction to setting up internal and external webhooks using the Notification API.  | notifications, events, webhook |
 
+
+## V2/university/T10001-WhatIsDrive
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T10001-WhatIsDrive.ipynb](<V2/university/T10001-WhatIsDrive/T10001-WhatIsDrive.ipynb>) | What is a drive? | What is a drive? | Drive
+
+
+
+## V2/university/T11001-WhatAreQuotes
+| filename | title | description | features |
+| --- | --- | --- | --- |
+[T11001-WhatAreQuotes.ipynb](<V2/university/T11001-WhatAreQuotes/T11001-WhatAreQuotes.ipynb>) | What are Quotes? | What are quotes?  | Quotes | 
+
+## V2/university/T12001-Properties-LUSIDsExtensibleDataModel
+| filename | title | description | features |
+| --- | --- | --- | --- |
+[T12001-Properties-LUSIDsExtensibleDataModel.ipynb](<V2/university/T12001-Properties-LUSIDsExtensibleDataModel/T12001-Properties-LUSIDsExtensibleDataModel.ipynb>) | Properties LUSIDs Extensible Date Model  | LUSID, Models |
+
+
+## V2/university/T11002-WorkingWithQuotes
+| filename | title | description | features |
+| --- | --- | --- | --- |
+[T11002-WorkingWithQuotes.ipynb](<V2/university/T11002-WorkingWithQuotes/T11002-WorkingWithQuotes.ipynb>) | Working with Quotes |Working with Quotes.  | Quotes |
+
+
 ## V2/university/T12002-Properties-DefiningProperties
 | filename | title | description | features |
 | --- | --- | --- | --- |
@@ -131,12 +156,16 @@ This project includes a `requirements.txt` file for running V2 notebooks locally
 | filename | title | description | features |
 | --- | --- | --- | --- |
 | [Example Data Load.ipynb](<V1/engineering-best-practises/Example Data Load.ipynb>) | Example Data Load | Loads some example data into LUSID | cutlabels, portfolio groups, quotes, transactions, valuation |
+| [Upserting a Large Payload.ipynb](<V1/engineering-best-practises/Upserting a Large Payload.ipynb>) | Upserting a Large Payload | Upserting a large Payload | holdings |
 | [Paging and limiting LUSID's API calls.ipynb](<V1/engineering-best-practises/Paging and limiting LUSID's API calls.ipynb>) | Paging and limiting LUSID's API calls | Shows how to slice up large requests to LUSID into smaller requests using the limit and page parameters. | paging |
 | [Requesting log details using the Insights API.ipynb](<V1/engineering-best-practises/Requesting log details using the Insights API.ipynb>) | Requesting details of inline valuation operations using the insights API |  | Insights, Request Logs |
 | [Business Agility - migration between investment systems.ipynb](<V1/engineering-best-practises/Business Agility - migration between investment systems.ipynb>) | Business agility | Demonstration of how to migrate your data from one system to another. | holdings, instruments, properties, reconciliations, set holdings, transaction configuration, transactions |
 | [Safely and efficiently test changes to your system.ipynb](<V1/engineering-best-practises/Safely and efficiently test changes to your system.ipynb>) | Testing system changes | Demonstration of how to safely test changes to your data in a production environment | derived portfolios, instrument definitions, instruments, set holdings, transactions |
 | [Set up a sandbox trading environment.ipynb](<V1/engineering-best-practises/Set up a sandbox trading environment.ipynb>) | Sandbox trading environment | Learn how to setup a virtual trading environment in LUSID. | aggregation, instruments, properties, quotes, reference portfolios, set holdings, transactions |
 | [Loading data with the Lusid-Python-Tools (LPT) package.ipynb](<V1/engineering-best-practises/Loading data with the Lusid-Python-Tools (LPT) package.ipynb>) | Loading data with LUSID Python Tools | Demonstrates how to load portfolios, instruments, holdings, and transactions. | cocoon, instruments, portfolios, transactions |
+[Set up a sandbox trading environment-DEMO.ipynb](<V1/engineering-best-practises/Set up a sandbox trading environment-DEMO.ipynb>) | Set up a sandbox trading environment-DEMO | Sets up sandbox training environment as a demostration | transactions, LUSID, set holdings |
+
+
 
 ## V1/features/entitlements
 | filename | title | description | features |
@@ -182,6 +211,18 @@ This project includes a `requirements.txt` file for running V2 notebooks locally
 | [Futures Valuation with Differing Cost Basis Treatments.ipynb](<V1/features/instruments/Futures Valuation with Differing Cost Basis Treatments.ipynb>) | Futures Valuation Workflow |  | futures, recipes, transaction types, valuations |
 | [Futures Valuation with notional cost and variation margin.ipynb](<V1/features/instruments/Futures Valuation with notional cost and variation margin.ipynb>) | Futures Valuation Workflow |  | futures, recipes, transaction types, valuations |
 | [Total Return Swap Pricing With Reference Instrument.ipynb](<V1/features/instruments/Total Return Swap Pricing With Reference Instrument.ipynb>) | Total Return Swap Pricing With Reference Instrument | Demonstrates pricing of an Total Return Swap with AssetLeg having the ReferenceInstrument as underlying. | instruments, reference-instrument, valuation |
+| [Forward Rate Agreement.ipynb](<V1/features/instruments/Forward Rate Agreement.ipynb>) | Forward Rate Agreenment | Demonstrates the Forward Rate Agreement. | agreement, valuation |
+| [Fx Forward Upsert & Valuation.ipynb](<V1/features/instruments/Fx Forward Upsert & Valuation.ipynb>) | Forward Upsert & Valuation | Shows the forward Upnert & Valuation | agreement, valuation |
+| [FX Option - 2 Trade comparison worksheet.ipynb](<V1/features/instruments/FX Option - 2 Trade comparison worksheet.ipynb>) | Forward Rate Agreenment | Demonstrates the Forward Rate Agreement. | agreement, valuation |
+| [FX Option Vanilla Risk Ladders](<V1/features/instruments/FX Option Vanilla Risk Ladders.ipynb>) | FX Option Vanilla Risk Ladders | Shows the FX Option Vanilla Risk Ladders | Risk, Ladders |
+| [FX Option Vanilla](<V1/features/instruments/FX Option Vanilla.ipynb>) | FX Option Vanilla | FX Option Vanilla | FX |
+
+
+## V1/features/workflow
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [Quality Control Workflow for Quotes](<V1/features/workflow/Quality Control Workflow for Quotes.ipynb>) | Quality Control Workflow for Quotes | Providing Quality Control Workflow for Quotes | Control, Workflow |
+
 
 ## V1/product/abor
 | filename | title | description | features |
@@ -200,6 +241,7 @@ This project includes a `requirements.txt` file for running V2 notebooks locally
 | [Multi-Value Properties.ipynb](<V1/product/edm/Multi-Value Properties.ipynb>) | Time-variant Properties (e.g. coupon schedule) in LUSID  | Illustrates the use of multi-value properties. | coupon schedules, multi-valued properties, time-variant properties |
 | [TimeVariant Properties.ipynb](<V1/product/edm/TimeVariant Properties.ipynb>) | Time-variant Properties (e.g. coupon schedule) in LUSID  | Illustrates the use of time-variant properties, a type of property that depend on different effective dates. | coupon schedules, multi-valued properties, time-variant properties |
 | [Maintaining an instrument master in LUSID.ipynb](<V1/product/edm/Maintaining an instrument master in LUSID.ipynb>) | Maintaining an instrument master | Demonstrates how to import, update, retrieve, and delete instruments. | instruments, properties, search |
+| [Custom Entities](<V1/product/edm/Custom Entities.ipynb>) | Custom Entities | Providing Custom Entities | Entities |
 
 
 ## V1/product/ibor
@@ -246,6 +288,14 @@ This project includes a `requirements.txt` file for running V2 notebooks locally
 | [SRS csv Example.ipynb](<V1/product/ibor/SRS csv Example.ipynb>) | Structured Results Store for storage of Portfolio data |  | luminesce, structured_results_store, virtual_document |
 | [Simple Valuation.ipynb](<V1/product/ibor/Simple Valuation.ipynb>) | Simple valuation with default recipes | This notebook shows how to value a portfolio using recipes, for an out of the box look at positions and valuations | manifests, recipes, transactions, valuation |
 | [Valuations with recipes.ipynb](<V1/product/ibor/Valuations with recipes.ipynb>) | Valuation with recipes | This notebook shows how to value a portfolio using recipes with different pricing sources | manifests, recipes, transactions, valuation |
+| [Calculating-dividend-tax-and-reporting-as-separate-cash-balance](<V1/product/ibor/Calculating-dividend-tax-and-reporting-as-separate-cash-balance.ipynb>) | Calculating-dividend-tax-and-reporting-as-separate-cash-balance | Calculating Dividend, tax and reporting as a seperate cash balance | transactions, dividends, tax, report |
+| [Combining instrument properties with holding properties](<V1/product/ibor/Combining instrument properties with holding properties.ipynb>) | Combining instrument properties with holding properties | Combining instrument properties with holding properties | instruments, properties |
+| [Example of a Stock Acquisition](<V1/product/ibor/Example of a Stock Acquisition.ipynb>) | Example of a Stock Acquisition | Example of a Stock Acquisition | Stock Acquistion |
+| [Inline Valuations with Inferred FX Rates](<V1/product/ibor/Inline Valuations with Inferred FX Rates.ipynb>) | Inline Valuations with Inferred FX Rates | providing Inline Valuations with Inferred FX Rates | Rates, Valuation |
+| [Look-through valuation (multi-level)](<V1/product/ibor/Look-through valuation (multi-level).ipynb>) | Look-through valuation (multi-level) | Looking-through valuation (multi-level) | valuation |
+| [Structured Results Store for Portfolio Level Data](<V1/product/ibor/Structured Results Store for Portfolio Level Data.ipynb>) | Structured Results Store for Portfolio Level Data | Providing Structured Results Store for Portfolio Level Data | Portfolio, Results |
+| [Valuations with Inferred FX Rates](<V1/product/ibor/Valuations with Inferred FX Rates.ipynb>) | Valuations with Inferred FX Rates | Valuating with Inferred FX Rates | FX Rates |
+
 
 ## V1/product/oms
 | filename | title | description | features |
@@ -261,6 +311,76 @@ This project includes a `requirements.txt` file for running V2 notebooks locally
 | [Valuation Analysis.ipynb](<V1/product/pms/Valuation Analysis.ipynb>) | Valuation Debugging |  | instruments, recipes, transactions, valuation, valuation manifest |
 
 
+## V1/university/R03001-OperationalControls-AuthoringOperationalControls
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [R03001-OperationalControls-AuthoringOperationalControls](<V1/university/R03001-OperationalControls-AuthoringOperationalControls/R03001-OperationalControls-AuthoringOperationalControls.ipynb>) | R03001-OperationalControls-AuthoringOperationalControls | Operational Controls and authoring Operational Controls | controls |
+
+## V1/university/R03001-OperationalControls-AuthoringOperationalControls
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [R03002-OperationalControls-SavingResultsAndTakingAction](<V1/university/R03002-OperationalControls-SavingResultsAndTakingActions/R03002-OperationalControls-SavingResultsAndTakingAction.ipynb>) | R03002-OperationalControls-SavingResultsAndTakingAction | Controls- Saving Results and Taking Action | Controls, Saving |
+
+## V1/university/T00000-Using-Python-with-LUSID
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [Basic Python scripting](<V1/university/T00000-Using-Python-with-LUSID/Basic Python scripting.ipynb>) | Basic Python scripting | Providing Basic Python Scripting | Scripts, Python |
+| [Using NumPy to efficiently work with large, multi-dimensional data](<V1/university/T00000-Using-Python-with-LUSID/Using NumPy to efficiently work with large, multi-dimensional data.ipynb>) | Using NumPy to efficiently work with large, multi-dimensional data | Using NumPy to efficiently work with large, multi-dimensional data | Data, NumPy |
+| [Using Pandas to work with DataFrames](<V1/university/T00000-Using-Python-with-LUSID/Using Pandas to work with DataFrames.ipynb>) | Using Pandas to work with DataFrames | Using Pandas to work with DataFrames | Dataframes, Panda |
+| [Using the FINBOURNE Python SDKs](<V1/university/T00000-Using-Python-with-LUSID/Using the FINBOURNE Python SDKs.ipynb>) | Using the FINBOURNE Python SDKs | Using the FINBOURNE Python SDKs | SDKs, Python |
+| [What are Python and Jupyter_](<V1/university/T00000-Using-Python-with-LUSID/What are Python and Jupyter_.ipynb>) | What are Python and Jupyter_ | What are Python and Jupyter | Python, Jupyter |
+
+## V1/university/T01001-LUSID-core-concepts
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [LUSID-core-concepts.ipynb](<V1/university/T01001-LUSID-core-concepts/T01001-LUSID-core-concepts.ipynb>) | LUSID Core Concepts | LUSID Core Concepts | Attributes<br>---------- |  |
+
+## V1/university/T01002-Creating-an-instrument-master
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T01002-Creating-an-instrument-master](<V1/university/T01002-Creating-an-instrument-master/T01002-Creating-an-instrument-master.ipynb>) | T01002-Creating-an-instrument-master | Creating an intrument Master | Attributes<br>----------  |
+
+## V1/university/T01003-Setting-up-a-transaction-portfolio-with-strategies
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T01003-Setting-up-a-transaction-portfolio-with-strategies](<V1/university/T01003-Setting-up-a-transaction-portfolio-with-strategies/T01003-Setting-up-a-transaction-portfolio-with-strategies.ipynb>) | T01003-Setting-up-a-transaction-portfolio-with-strategies | Setting up a transaction portfolio with strategies | transactions, portofolio |
+
+## V1/university/T01004-Portfolio-holding-reconciliation
+| --- | --- | --- | --- |
+| [T01004-Portfolio-holding-reconciliation](<V1/university/T01004-Portfolio-holding-reconciliation/T01004-Portfolio-holding-reconciliation.ipynb>) | Portfolio holding reconciliation | Portfolio holding reconciliation | Portfolio, holdings |
+
+## V1/university/ T01005-Basic-portfolio-valuation
+| --- | --- | --- | --- |
+| [T01005-Basic-portfolio-valuation](<V1/university/T01005-Basic-portfolio-valuation/T01005-Basic-portfolio-valuation.ipynb>) | Basic portfolio Valuation | Basic Portfolio Valuation | Valuation, Portfolio |
+
+## V1/university/T01006-Introduction-to-transaction-configuration
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T01006-Ensuring-the-same-transaction-code-has-different-economic-impacts](<V1/university/T01006-Introduction-to-transaction-configuration/T01006-Ensuring-the-same-transaction-code-has-different-economic-impacts.ipynb>) | T01006-Ensuring-the-same-transaction-code-has-different-economic-impacts | Ensuring the same transaction code has the different economic impacts| transactions, effects |
+| [T01006-Breaking-out-broker-commission-as-a-separate-cash-holding](<V1/university/T01006-Introduction-to-transaction-configuration/T01006-Breaking-out-broker-commission-as-a-separate-cash-holding.ipynb>) | Breaking out broker commision as a seperate cash holding | Breaking out broker commision as a seperate cash holding | Cash Holdings  |
+| [T01006-Ensuring-different-transaction-codes-have-the-same-economic-impact](<V1/university/T01006-Introduction-to-transaction-configuration/T01006-Ensuring-different-transaction-codes-have-the-same-economic-impact.ipynb>) | Ensuring different transactions codes have the same economic impact |Ensuring different transactions codes have the same economic impact| Transactions |
+| [T01006-Reducing-the-cash-balance-by-the-cost-of-broker-commission](<V1/university/T01006-Introduction-to-transaction-configuration/T01006-Reducing-the-cash-balance-by-the-cost-of-broker-commission.ipynb>) | Reducing the cash balance by the cost of broker commision | Reducing the cash balance by the cost of broker commision | Cash balance |
+
+## V1/university/T10001-WhatIsDrive
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T10001-WhatIsDrive](<V1/university/T10001-WhatIsDrive/T10001-WhatIsDrive.ipynb>) | What is in the drive? | What is in the drive? | Drive |
+
+## V1/university/T11001-WhatAreQuotes
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T11001-WhatAreQuotes](<V1/university/T11001-WhatAreQuotes/T11001-WhatAreQuotes.ipynb>) | What are Quotes?| What are quotes? | Quotes |
+
+## V1/university/T11002-WorkingWithQuotes
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T11002-WorkingWithQuotes](<V1/university/T11002-WorkingWithQuotes/T11002-WorkingWithQuotes.ipynb>) | Working with Quotes | Working with Quotes | Quotes |
+
+## V1/university/T12001-Properties-LUSIDsExtensibleDataModel
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T12001-Properties-LUSIDsExtensibleDataModel](<V1/university/T12001-Properties-LUSIDsExtensibleDataModel/T12001-Properties-LUSIDsExtensibleDataModel.ipynb>) | Properties LUSIDs Extensible Data Model | Properties LUSIDs Extensible Data Model | Data Model, LUSID |
+
 ## V1/university/T02002-Luminesce-syntax
 | filename | title | description | features |
 | --- | --- | --- | --- |
@@ -270,3 +390,25 @@ This project includes a `requirements.txt` file for running V2 notebooks locally
 | filename | title | description | features |
 | --- | --- | --- | --- |
 | [Providers and Views.ipynb](<V1/university/T02003-Luminesce-Providers-and-Views/Providers and Views.ipynb>) | Luminesce Providers and Views | Attributes<br>---------- |  |
+
+## V1/university/T12002-Properties-DefiningProperties
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T12002-Properties-DefiningProperties](<V1/university/T12002-Properties-DefiningProperties/T12002-Properties-DefiningProperties.ipynb>) | Properties Defining Properties | Properties Defining Properties | Properties |
+
+## V1/university/T12003-Properties-PopulatingPerpetualPropertyValues
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T12003-Properties-PopulatingPerpetualPropertyValues](<V1/university/T12003-Properties-PopulatingPerpetualPropertyValues/T12003-Properties-PopulatingPerpetualPropertyValues.ipynb>) | Populating Perpetual Property Values | Populating Perpetual Property Values | Populating, Property |
+
+## V1/university/T12004-Properties-PopulatingTimeVariantPropertyValues
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T12004-Properties-PopulatingTimeVariantPropertyValues](<V1/university/T12004-Properties-PopulatingTimeVariantPropertyValues/T12004-Properties-PopulatingTimeVariantPropertyValues.ipynb>) | Properties Populating Time Variant Property Values| Properties Populating Time Variant Property Values | Property Values |
+
+## V1/university/T12005-Properties-ViewingAPropertysHistory
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T12005-Properties-ViewingAPropertysHistory](<V1/university/T12005-Properties-ViewingAPropertysHistory/T12005-Properties-ViewingAPropertysHistory.ipynb>) | Properties Viewing Property History | Properties Viewing Property History  | History |
+
+
