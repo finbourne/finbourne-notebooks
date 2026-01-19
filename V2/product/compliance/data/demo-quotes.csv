@@ -1,0 +1,34 @@
+Ticker,Company,Type,ISIN,price,date,price_type,scale_factor
+AAPL,Apple Inc.,Equity,US0378331005,202.67,10/6/2025,Price,
+MSFT,Microsoft Corp.,Equity,US5949181045,470.92,10/6/2025,Price,
+GOOGL,Alphabet Inc. (Class A),Equity,US02079K3059,178.6,10/6/2025,Price,
+META,Meta Platforms Inc.,Equity,US30303M1027,702.4,10/6/2025,Price,
+AMZN,Amazon.com Inc.,Equity,US0231351067,217.61,10/6/2025,Price,
+TSLA,Tesla Inc.,Equity,US88160R1014,326.09,10/6/2025,Price,
+JNJ,Johnson & Johnson,Equity,US4781601046,156.45,10/6/2025,Price,
+PFE,Pfizer Inc.,Equity,US7170811035,24.3,10/6/2025,Price,
+JPM,JPMorgan Chase & Co.,Equity,US46625H1005,268.6,10/6/2025,Price,
+BAC,Bank of America Corp.,Equity,US0605051046,45.09,10/6/2025,Price,
+XOM,Exxon Mobil Corp.,Equity,US30231G1022,107.22,10/6/2025,Price,
+CVX,Chevron Corp.,Equity,US1667641005,143.35,10/6/2025,Price,
+HD,Home Depot Inc.,Equity,US4370761029,367.91,10/6/2025,Price,
+PG,Procter & Gamble Co.,Equity,US7427181091,162.84,10/6/2025,Price,
+KO,Coca?Cola Co.,Equity,US1912161007,72.35,10/6/2025,Price,
+UNH,UnitedHealth Group Inc.,Equity,US91324P1021,303.79,10/6/2025,Price,
+NVDA,NVIDIA Corp.,Equity,US67066G1040,143.96,10/6/2025,Price,
+NEE,NextEra Energy Inc.,Equity,US65339F1012,72.81,10/6/2025,Price,
+CAT,Caterpillar Inc.,Equity,US1491231015,358.57,10/6/2025,Price,
+LMT,Lockheed Martin Corp.,Equity,US5398301094,476.9,10/6/2025,Price,
+VEA,Vanguard FTSE Developed Markets ETF,ETF,US9219438584,56.43,10/6/2025,Price,
+IEFA,iShares Core MSCI EAFE ETF,ETF,US46434V7525,83.56,10/6/2025,Price,
+VWO,Vanguard FTSE Emerging Markets ETF,ETF,US9220428588,48.95,10/6/2025,Price,
+EFA,iShares MSCI EAFE ETF,ETF,US4642874659,89.85,10/6/2025,Price,
+SPDW,SPDR Portfolio Developed World ex?US ETF,ETF,US78464A1025,40.44,10/6/2025,Price,
+US02,US 2-Year Treasury Note,Bond,US912828U816,99.5,10/6/2025,CleanPrice,100
+US05,US 5-Year Treasury Note,Bond,US912828U857,99.5,10/6/2025,CleanPrice,100
+US10,US 10-Year Treasury Note,Bond,US912828U865,99.5,10/6/2025,CleanPrice,100
+US30,US 30-Year Treasury Bond,Bond,US912810U816,99.5,10/6/2025,CleanPrice,100
+TSCO6.25,TESCO_6.25_2040,Bond,US881578AC87,99.5,10/6/2025,CleanPrice,100
+TSCO6.15,TESCO_6.15_2037,Bond,US881575AC87,99.5,10/6/2025,CleanPrice,100
+KO3.4530,KO_3.45_2030,Bond,US191216CT51,98,10/6/2025,CleanPrice,100
+TDG6.0033,TDG_6.0_2033,Bond,USU8936PBE26,97,10/6/2025,CleanPrice,100
