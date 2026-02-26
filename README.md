@@ -148,6 +148,10 @@ This project includes a `requirements.txt` file for running V2 notebooks locally
 |---------------------------------------------------------------------------------|----------------------|----------------------------------------------------------------------|----------|
 | [Get Okta System Logs.ipynb](<V2/features/identity/Get Okta System Logs.ipynb>) | Get Okta System Logs | Demonstrates how to retrieve Okta System Logs using the Identity SDK | identity |
 
+## V2/product/edm
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [Relationships.ipynb](<V2/product/edm/RelationShips.ipynb>) | Relationships | Demonstrates how to create relationships between different portfolios. | relationships |
 
 
 # V1
@@ -237,7 +241,6 @@ This project includes a `requirements.txt` file for running V2 notebooks locally
 ## V1/product/edm
 | filename | title | description | features |
 | --- | --- | --- | --- |
-| [Relations.ipynb](<V1/product/edm/Relations.ipynb>) | Relations | Demonstrates how to create relationships between different portfolios. | relations |
 | [Multi-Value Properties.ipynb](<V1/product/edm/Multi-Value Properties.ipynb>) | Time-variant Properties (e.g. coupon schedule) in LUSID  | Illustrates the use of multi-value properties. | coupon schedules, multi-valued properties, time-variant properties |
 | [TimeVariant Properties.ipynb](<V1/product/edm/TimeVariant Properties.ipynb>) | Time-variant Properties (e.g. coupon schedule) in LUSID  | Illustrates the use of time-variant properties, a type of property that depend on different effective dates. | coupon schedules, multi-valued properties, time-variant properties |
 | [Maintaining an instrument master in LUSID.ipynb](<V1/product/edm/Maintaining an instrument master in LUSID.ipynb>) | Maintaining an instrument master | Demonstrates how to import, update, retrieve, and delete instruments. | instruments, properties, search |
