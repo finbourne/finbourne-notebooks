@@ -1,0 +1,34 @@
+Ticker,Company Name,Type,ISIN,FIGI,custom_sector,Issue Date,Maturity Date,Coupon,rating_moodys,rating_sp,custom_asset_class,currency,UltimateParent
+AAPL,Apple Inc.,Equity,US0378331005,BBG000B9XRY4,Information Technology,,,,,,Equity - Domestic,USD,AAPL
+MSFT,Microsoft Corp.,Equity,US5949181045,BBG000BPH459,Information Technology,,,,,,Equity - Domestic,USD,MSFT
+GOOGL,Alphabet Inc. (Class A),Equity,US02079K3059,BBG009S39JY5,Communication Services,,,,,,Equity - Domestic,USD,GOOGL
+META,Meta Platforms Inc.,Equity,US30303M1027,BBG000MM2P62,Communication Services,,,,,,Equity - Domestic,USD,META
+AMZN,Amazon.com Inc.,Equity,US0231351067,BBG000BVPV84,Consumer Discretionary,,,,,,Equity - Domestic,USD,AMZN
+TSLA,Tesla Inc.,Equity,US88160R1014,BBG000N9MNX3,Consumer Discretionary,,,,,,Equity - Domestic,USD,TSLA
+JNJ,Johnson & Johnson,Equity,US4781601046,BBG000BMHYD1,Health Care,,,,,,Equity - Domestic,USD,JNJ
+PFE,Pfizer Inc.,Equity,US7170811035,BBG000BMHYD2,Health Care,,,,,,Equity - Domestic,USD,PFE
+JPM,JPMorgan Chase & Co.,Equity,US46625H1005,BBG000BMHYD3,Financials,,,,,,Equity - Domestic,USD,JPM
+BAC,Bank of America Corp.,Equity,US0605051046,BBG000BMHYD4,Financials,,,,,,Equity - Domestic,USD,BAC
+XOM,Exxon Mobil Corp.,Equity,US30231G1022,BBG000BMHYD5,Energy,,,,,,Equity - Domestic,USD,XOM
+CVX,Chevron Corp.,Equity,US1667641005,BBG000BMHYD6,Energy,,,,,,Equity - Domestic,USD,CVX
+HD,Home Depot Inc.,Equity,US4370761029,BBG000BMHYD7,Consumer Discretionary,,,,,,Equity - Domestic,USD,HD
+PG,Procter & Gamble Co.,Equity,US7427181091,BBG000BMHYD8,Consumer Staples,,,,,,Equity - Domestic,USD,PG
+KO,Coca-Cola Co.,Equity,US1912161007,BBG000BMHYD9,Consumer Staples,,,,,,Equity - Domestic,USD,KO
+UNH,UnitedHealth Group Inc.,Equity,US91324P1021,BBG000BMHYDA,Health Care,,,,,,Equity - Domestic,USD,UNH
+NVDA,NVIDIA Corp.,Equity,US67066G1040,BBG000BMHYDB,Information Technology,,,,,,Equity - Domestic,USD,NVDA
+NEE,NextEra Energy Inc.,Equity,US65339F1012,BBG000BMHYDC,Utilities,,,,,,Equity - Domestic,USD,NEE
+CAT,Caterpillar Inc.,Equity,US1491231015,BBG000BMHYDD,Industrials,,,,,,Equity - Domestic,USD,CAT
+LMT,Lockheed Martin Corp.,Equity,US5398301094,BBG000BMHYDE,Industrials,,,,,,Equity - Domestic,USD,LMT
+VEA,Vanguard FTSE Developed Markets ETF,ETF,US9219438584,BBG000VZ3D66,Developed Markets ex-US,,,,,,Equity - International,USD,VEA
+IEFA,iShares Core MSCI EAFE ETF,ETF,US46434V7525,BBG000VZ3D67,"Europe, Australasia, Far East",,,,,,Equity - International,USD,IEFA
+VWO,Vanguard FTSE Emerging Markets ETF,ETF,US9220428588,BBG000VZ3D68,Emerging Markets,,,,,,Equity - International,USD,VWO
+EFA,iShares MSCI EAFE ETF,ETF,US4642874659,BBG000VZ3D69,"Europe, Australasia, Far East",,,,,,Equity - International,USD,EFA
+SPDW,SPDR Portfolio Developed World ex-US ETF,ETF,US78464A1025,BBG000VZ3D70,Developed Markets ex-US,,,,,,Equity - International,USD,SPDW
+US02,US 2-Year Treasury Note,Bond,US912828U816,BBG0000VHYD1,US Government Bond,2023-05-15T00:00:00Z,2027-05-15T00:00:00Z,0.045,Aa2,,US Government,USD,US_Gov
+US05,US 5-Year Treasury Note,Bond,US912828U857,BBG0000VHYD2,US Government Bond,2023-05-15T00:00:00Z,2030-05-15T00:00:00Z,0.04,Aa2,,US Government,USD,US_Gov
+US10,US 10-Year Treasury Note,Bond,US912828U865,BBG0000VHYD3,US Government Bond,2023-05-15T00:00:00Z,2035-05-15T00:00:00Z,0.04625,Aa2,,US Government,USD,US_Gov
+US30,US 30-Year Treasury Bond,Bond,US912810U816,BBG0000VHYD4,US Government Bond,2023-05-15T00:00:00Z,2055-05-15T00:00:00Z,0.05,Aa2,,US Government,USD,US_Gov
+TSCO6.25,TESCO_6.25_2040,Bond,US881578AC87,BBG001CX60X0,Credit,2020-01-01T00:00:00Z,2040-01-01T00:00:00Z,0.0625,Baa1,A-,Corporate,USD,TSCO
+TSCO6.15,TESCO_6.15_2037,Bond,US881575AC87,BBG001CX59X0,Credit,2020-01-01T00:00:00Z,2037-01-01T00:00:00Z,0.0615,Baa1,A-,Corporate,USD,TSCO
+KO3.4530,KO_3.45_2030,Bond,US191216CT51,BBGKO9215654,Credit,2022-03-25T00:00:00Z,2030-03-25T00:00:00Z,0.0345,A1,A+,Corporate,USD,KO
+TDG6.0033,TDG_6.0_2033,Bond,USU8936PBE26,BBGUSU8936PB,Credit,2023-01-15T00:00:00Z,2033-01-15T00:00:00Z,0.06,Ba,BB,Corporate,USD,TDG

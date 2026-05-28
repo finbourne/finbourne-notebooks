@@ -1,0 +1,8 @@
+IdentifierType,Identifier,Type,Price,Currency,Date
+ClientInternal,EQUITY_APPL,Price,76.93,USD,2020-05-15
+ClientInternal,EQUITY_MSFT,Price,183.16,USD,2020-05-15
+ClientInternal,EQUITY_BRKB,Price,253501.00,USD,2020-05-15
+ClientInternal,EQUITY_NVDA,Price,84.91,USD,2020-05-15
+ClientInternal,EQUITY_JNJ,Price,150.44,USD,2020-05-15
+ClientInternal,EQUITY_PEP,Price,135.95,USD,2020-05-15
+CurrencyPair,GBP/USD,Rate,1.2435,USD,2020-05-15

@@ -1,0 +1,4 @@
+﻿date,ticker,name,figi,Sector,open_price,close_price,client_internal
+2020-08-28T00:00:00.000Z,AMZN,Amazon Nasdaq,BBG000BVPXP1,Equity Investment Instruments,111,111.5,imd_34634534
+2020-08-28T00:00:00.000Z,,Anglian Water 40LV,,Fixed Income,110.93,112.2,imd_13579246
+2020-08-28T00:00:00.000Z,ZIZ21,ICE Silver 5000oz Dec21,,Commodities,24.3,25.4,imd_12457801

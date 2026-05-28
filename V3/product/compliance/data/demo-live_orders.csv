@@ -1,0 +1,3 @@
+﻿instrument_name,ticker,isin,figi,quantity,price,currency,order_id,side,type,state,limit_price,limit_currency,stop_price,stop_currency
+KO_3.45_2030,KO3.4530,US191216CT51,BBGKO9215654,10000000,98.25,USD,cd_ORD01,Buy,Limit,New,98.25,USD,,
+TDG_6.0_2033,TDG6.0033,USU8936PBE26,BBGUSU8936PB,12000000,96.875,USD,cd_ORD02,Sell,Limit,New,96.5,USD,,

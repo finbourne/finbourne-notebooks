@@ -1,0 +1,6 @@
+﻿domain,code,displayname,data_type_id_scope,data_type_id_code,constraint_style,lifetime,description
+Instrument,rating_sp,S&P Rating,system,string,Property,Perpetual,S&P Rating
+Instrument,rating_moodys,Moodys Rating,system,string,Property,Perpetual,Moodys Rating
+Instrument,custom_asset_class,Asset Class,system,string,Property,Perpetual,My firm definition of Asset Class
+Instrument,custom_sector,Sector,system,string,Property,Perpetual,My firm definition of Sector
+Instrument,ultimate_parent,Ultimate Parent,system,string,Property,Perpetual,Issuer
