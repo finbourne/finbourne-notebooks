@@ -1,0 +1,13 @@
+{
+	"instrumentUid": "LusidInstrumentId",
+	"subHoldingKeys": "SubHoldingKeys",
+	"holdingType": "HoldingType",
+	"units": "Units",
+	"settledUnits": "SettledUnits",
+	"cost.amount": "Amount-Cost",
+	"cost.currency": "Currency-Cost",
+	"costPortfolioCcy.amount": "Amount-CostPortfolioCcy",
+	"costPortfolioCcy.currency": "Currenct-CostPortfolioCcy",
+	"properties.Instrument/default/Name.value.labelValue": "InstrumentName",
+	"properties.Holding/default/SourcePortfolioId.value.labelValue": "SourcePortfolioId"
+}

@@ -5,6 +5,202 @@ This repository contains Jupyter notebooks that show how to use [LUSID](https://
 * `features` - Notebooks showing specific LUSID features. These notebooks are short and specific.
 * `use-cases` - Notebooks showing sample business implementations or use-cases. These notebooks will combine various LUSID features to solve a business use-case. The `use-case` notebooks are generally longer than the `features` ones.
 
+# V3
+
+These notebooks use the v3 (`finbourne-sdk`) unified SDK. Run locally with `uv sync --extra v3`.
+
+## V3/features/identity
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [Get Okta System Logs](<V3/features/identity/Get Okta System Logs.ipynb>) | Get Okta System Logs | Demonstrates how to retrieve Okta System Logs using the Identity SDK | identity |
+
+## V3/product/abor
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [Create and Setup Chart of Accounts and General Ledger Accounts](<V3/product/abor/Create and Setup Chart of Accounts and General Ledger Accounts.ipynb>) | Corporate Actions in LUSID |  | Accounts, Chart of Accounts, Properties |
+| [Generate P&L with different accounting methods (FIFO and LIFO)](<V3/product/abor/Generate P&L with different accounting methods (FIFO and LIFO).ipynb>) | Accounting methods | Generating P&L with different accounting methods (FIFO and LIFO) | accounting methods, cocoon, derived portfolios, transaction configuration |
+| [Generate a Trial Balance (using Luminesce)](<V3/product/abor/Generate a Trial Balance (using Luminesce).ipynb>) | Generate a trial balance | Demonstrates how to setup LUSID to run a trial balance on a portfolio using Luminesce. | abor, trial balance, transaction types, luminesce |
+| [Identifying Downstream Consumers affected by Backdated Corrections on a Locked Reporting Window](<V3/product/abor/Identifying Downstream Consumers affected by Backdated Corrections on a Locked Reporting Window.ipynb>) | Identifying backdated corrections | Demonstration of how to identify backdated corrections and their impact | build transaction, cocoon - seed_data, insights, portfolio changes |
+| [Maintain a fund in multiple currencies and share classes](<V3/product/abor/Maintain a fund in multiple currencies and share classes.ipynb>) | Modelling share classes in LUSID | This notebook shows how to model a fund that operates in different currencies and share classes. | adjust holdings, aggregation, holdings, instrument definitions, quotes, transactions |
+| [Using Custodian Accounts](<V3/product/abor/Using Custodian Accounts.ipynb>) | Custodian Accounts in LUSID |  | custodian accounts, transaction portfolios, transactions |
+
+## V3/product/compliance
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [Configuring and Running Pre and Post Trade Compliance](<V3/product/compliance/Configuring and Running Pre and Post Trade Compliance.ipynb>) | Compliance Overview |  |  |
+
+## V3/product/data-quality
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [data-quality-check-tutorial](<V3/product/data-quality/data-quality-check-tutorial.ipynb>) | Data quality checks tutorial |  |  |
+
+## V3/product/edm
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [Custom Entities](<V3/product/edm/Custom Entities.ipynb>) | Custom Entities | Providing Custom Entities | Entities |
+| [Maintaining an instrument master in LUSID](<V3/product/edm/Maintaining an instrument master in LUSID.ipynb>) | Maintaining an instrument master | Demonstrates how to import, update, retrieve, and delete instruments. | instruments, properties, search |
+| [Multi-Value Properties](<V3/product/edm/Multi-Value Properties.ipynb>) | Time-variant Properties (e.g. coupon schedule) in LUSID | Illustrates the use of multi-value properties. | coupon schedules, multi-valued properties, time-variant properties |
+| [RelationShips](<V3/product/edm/RelationShips.ipynb>) | Relationships | Demonstrates how to create relationships between different portfolios. | relationships |
+| [TimeVariant Properties](<V3/product/edm/TimeVariant Properties.ipynb>) | Time-variant Properties (e.g. coupon schedule) in LUSID | Illustrates the use of time-variant properties, a type of property that depend on different effective dates. | coupon schedules, multi-valued properties, time-variant properties |
+
+## V3/product/ibor
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [Backtesting with LUSID derived portfolios](<V3/product/ibor/Backtesting with LUSID derived portfolios.ipynb>) | Backtesting with derived portfolios | Shows how to use a derived portfolio to test different trading strategies. | aggregation, cocoon, derived portfolios, holdings, instruments, quotes |
+| [Booking subscriptions and redemptions](<V3/product/ibor/Booking subscriptions and redemptions.ipynb>) | Booking subscriptions and redemptions | Demonstration of how to model subscriptions and redemptions in LUSID | cocoon - seed_data, holdings, transaction configuration |
+| [Calculating Index Returns](<V3/product/ibor/Calculating Index Returns.ipynb>) | Calculating Returns for an Index |  |  |
+| [Calculating P&L on strategy](<V3/product/ibor/Calculating P&L on strategy.ipynb>) | Calculating P&amp;L on strategies | Demonstration of how to use sub-holding keys and output transactions to track P&L on different strategies. | cocoon - seed_data, derived portfolios, output transactions, properties, sub-holding keys, transactions |
+| [Calculating-dividend-tax-and-reporting-as-separate-cash-balance](<V3/product/ibor/Calculating-dividend-tax-and-reporting-as-separate-cash-balance.ipynb>) | Calculating-dividend-tax-and-reporting-as-separate-cash-balance | Calculating Dividend, tax and reporting as a seperate cash balance | transactions, dividends, tax, report |
+| [Cancelling transactions in LUSID](<V3/product/ibor/Cancelling transactions in LUSID.ipynb>) | Cancelling transactions | Demonstration of how to use the CancelTransactions endpoint to cancel transactions in a LUSID portfolio. | cancel transactions, cocoon - seed_data, holdings, transactions |
+| [Checking a portfolio for transaction updates since an AsAt time](<V3/product/ibor/Checking a portfolio for transaction updates since an AsAt time.ipynb>) | Checking a portfolio for transaction updates since an AsAt time |  | AsAt, GetPortfolioChanges API, Transaction Portfolios |
+| [Combining instrument properties with holding properties](<V3/product/ibor/Combining instrument properties with holding properties.ipynb>) | Combining instrument properties with holding properties | Combining instrument properties with holding properties | instruments, properties |
+| [Composite returns adjusted for FX rates](<V3/product/ibor/Composite returns adjusted for FX rates.ipynb>) | Loading and caculating returns | Demonstration of how to get aggregate returns adjusted by FX performance | Composite portfolios, FX performance, Returns |
+| [Configuration Recipe Composability Using Recipe Composer](<V3/product/ibor/Configuration Recipe Composability Using Recipe Composer.ipynb>) | Recipe Composer Workflow |  | recipe composers, recipes, valuations |
+| [Corporate Actions](<V3/product/ibor/Corporate Actions.ipynb>) | Equity - Handling Corporate Actions |  | bonus issue, corporate actions, dividend, equity, merger, recipes, spin-off, split, valuations |
+| [Creating Portfolios With Different Tax Lot Management Methods](<V3/product/ibor/Creating Portfolios With Different Tax Lot Management Methods.ipynb>) | Creating portfolios with different tax lot management methods | This notebook demonstrates how to create transaction portfolios under different tax lot accounting methodologies. | accounting, corporate actions, holdings, taxlots, transactions |
+| [Derived portfolios](<V3/product/ibor/Derived portfolios.ipynb>) | Derived portfolios | Shows how to use derived portfolios, a type of portfolio that inherits the contents from a parent portfolio. | derived portfolios, holdings, transactions |
+| [Example of a Stock Acquisition](<V3/product/ibor/Example of a Stock Acquisition.ipynb>) | Example of a Stock Acquisition | Example of a Stock Acquisition | Stock Acquistion |
+| [Externally Calculated Metrics](<V3/product/ibor/Externally Calculated Metrics.ipynb>) | Save externally calculated metrics and use them within the Valuation Engine | Attributes<br>---------- |  |
+| [Generating Corporate actions natively in LUSID](<V3/product/ibor/Generating Corporate actions natively in LUSID.ipynb>) | Corporate Actions in LUSID | Demonstrates how to create and apply a corporate action to a portfolio. | corporate actions, derived portfolios, holdings, transactions |
+| [Generating an IBOR extract with LUSID's GetHoldings method](<V3/product/ibor/Generating an IBOR extract with LUSID's GetHoldings method.ipynb>) | Generating an IBOR extract | Demonstrates how to use the GetHoldings API to generate IBOR extracts. | cocoon - seed_data, holdings |
+| [Generating holdings with the movements engine in LUSID](<V3/product/ibor/Generating holdings with the movements engine in LUSID.ipynb>) | Generating holdings | Generating holdings with the movements engine | cocoon, instruments, transaction configuration, transactions |
+| [Get Holdings and Extract to csv](<V3/product/ibor/Get Holdings and Extract to csv.ipynb>) | Get Holdings | Shows how to use the Get Holdings endpoint and extract it to a csv | holdings, transaction portfolios |
+| [Get a consolidated view of your data from multiple systems](<V3/product/ibor/Get a consolidated view of your data from multiple systems.ipynb>) | Consolidating multiple systems | Demonstration of how to migrate funds from multiple source systems into LUSID | aggregation, holdings, instruments, properties, quotes, reconciliations, transaction configuration |
+| [How do I create holdings in LUSID](<V3/product/ibor/How do I create holdings in LUSID.ipynb>) | Creating holdings in LUSID | Demonstrates how to load transactions based on custom transaction types and then compute the subsequent holdings. | properties, transaction configuration, transactions |
+| [IBOR User Journey](<V3/product/ibor/IBOR User Journey.ipynb>) | IBOR User Journey | A day in the life of an IBOR using LUSID | aggregation, aggregation, cocoon, corporate actions, instruments, quotes, results store, sub-holding keys, transaction configuration, valuation reconciliation |
+| [Incorporating live orders into your holdings view](<V3/product/ibor/Incorporating live orders into your holdings view.ipynb>) | Live Orders with Holdings in LUSID |  | holdings, instruments, orders, portfolio, quotes, recipe |
+| [Inline Valuations with Inferred FX Rates](<V3/product/ibor/Inline Valuations with Inferred FX Rates.ipynb>) | Inline Valuations with Inferred FX Rates | providing Inline Valuations with Inferred FX Rates | Rates, Valuation |
+| [Load Transactions from an External System](<V3/product/ibor/Load Transactions from an External System.ipynb>) | Loading transactions from an external system | Demonstration of loading a transaction XML file from another "External System" into LUSID. | cocoon, holdings, transactions |
+| [Loading and calculating returns](<V3/product/ibor/Loading and calculating returns.ipynb>) | Loading and calculating returns | Demonstration of how to load and calculate returns in LUSID. | Returns |
+| [Look-through valuation (multi-level)](<V3/product/ibor/Look-through valuation (multi-level).ipynb>) | Look-through valuation (multi-level) | Looking-through valuation (multi-level) | valuation |
+| [Manage your investment strategies](<V3/product/ibor/Manage your investment strategies.ipynb>) | Managing investment strategies | Demonstration of how to compare how strategies are performing across all of our client's holdings, rather than just looking at a single portfolio in isolation. | aggregation, data types, instruments, portfolio groups, properties, set holdings, transactions |
+| [Managing cashflows - capital calls and income distributions](<V3/product/ibor/Managing cashflows - capital calls and income distributions.ipynb>) | Running a Fund with Investors | Demonstration of how to manage a fund's subscriptions and capital calls with investors in LUSID | holdings, instruments, properties, transaction configuration, transactions |
+| [Manual journal entries to correct cash balances](<V3/product/ibor/Manual journal entries to correct cash balances.ipynb>) | Correcting cash balances with manual journal entries | Demonstration of how to model manual journal entries in LUSID | cancel transactions, cocoon, holdings, reconciliations, transaction configuration |
+| [Model selection using instrument features and properties](<V3/product/ibor/Model selection using instrument features and properties.ipynb>) | Model selection using instrument features and properties | Demonstration of how to configure model selectio for valuation based on instrument features as well as instrument properties. | Derived instrument properties, Instrument features, Instruments, Model selection |
+| [Output Transactions](<V3/product/ibor/Output Transactions.ipynb>) | Output Transactions | This notebook shows how LUSID uses synthetic transactions to fill in the gaps between user-instructed transactions and corporate actions. | adjust holdings, build transactions, corporate actions, instruments, output transactions, portfolios, stock split, sub-holding keys, transactions |
+| [Perform a reconciliation](<V3/product/ibor/Perform a reconciliation.ipynb>) | Reconciliations | Demonstration of how to use LUSID to find discrepancies between versions of a portfolio | adjust holdings, instruments, portfolio groups, properties, reconciliations, set holdings, transactions |
+| [Portfolio types and portfolio groups in LUSID](<V3/product/ibor/Portfolio types and portfolio groups in LUSID.ipynb>) | Portfolios and Portfolio Groups | Demonstrates how to do various operations with portfolios and portfolio groups. | commands, corporate actions, portfolio groups, portfolios, transactions |
+| [Private Markets and Real Estate](<V3/product/ibor/Private Markets and Real Estate.ipynb>) | Private Markets and Real Estate |  | cash flows, excel, lookthrough, pdf, private markets, quotes, real estate, transactions |
+| [Processing Corporate Actions as native LUSID transitions](<V3/product/ibor/Processing Corporate Actions as native LUSID transitions.ipynb>) | Processing Corporate Actions using LUSID transitions | Demonstration of booking corporate actions using LUSID's transitions | cocoon - seed_data, corporate actions, holdings, transaction configuration, transactions |
+| [Real-time Valuation.Factset](<V3/product/ibor/Real-time Valuation.Factset.ipynb>) | Real-time Valuation |  |  |
+| [Real-time Valuation.SIX](<V3/product/ibor/Real-time Valuation.SIX.ipynb>) | Real-time Valuation |  |  |
+| [Returns on composite portfolios](<V3/product/ibor/Returns on composite portfolios.ipynb>) | Loading and caculating returns | Demonstration of how to load and calculate returns on composite portfolios in LUSID | Composite portfolios, Returns |
+| [Running a Global Fund](<V3/product/ibor/Running a Global Fund.ipynb>) | Running a global fund | Demonstration of using LUSID to run funds fed from multiple source systems across multiple regions | aggregation, cocoon, cut labels, instruments, quotes, recipes, transaction configuration, transactions |
+| [Simple Valuation](<V3/product/ibor/Simple Valuation.ipynb>) | Simple valuation with default recipes | This notebook shows how to value a portfolio using recipes, for an out of the box look at positions and valuations | manifests, recipes, transactions, valuation |
+| [Structured Results Store for Portfolio Level Data](<V3/product/ibor/Structured Results Store for Portfolio Level Data.ipynb>) | Structured Results Store for Portfolio Level Data | Providing Structured Results Store for Portfolio Level Data | Portfolio, Results |
+| [Sub-holding Keys](<V3/product/ibor/Sub-holding Keys.ipynb>) | Sub-Holding Keys | Demonstration of how to set up and use sub-holding keys | cocoon - seed_data, holdings, properties, prorated, sub-holding keys |
+| [Supporting a multi-asset class book of business](<V3/product/ibor/Supporting a multi-asset class book of business.ipynb>) | Bespoke asset classes | Demonstration of how to create your own custom instrument inside LUSID, create a transaction against it and value it. | aggregation, instruments, properties, quotes, transactions |
+| [Track trading commissions in your portfolio](<V3/product/ibor/Track trading commissions in your portfolio.ipynb>) | Track trading costs and commissions in your portfolio | Demonstrates how to track commissions and fees separately from trade costs. | cocoon, instruments, portfolio groups, properties, sub-holding keys, transaction configuration, transactions |
+| [Transactions with Trade To Portfolio Rate](<V3/product/ibor/Transactions with Trade To Portfolio Rate.ipynb>) | Trade To Portfolio Rate (TTPR) Demo | This notebook demonstrates how LUSID can resolve the Trade To Portfolio Rate for transactions booked with different trade currencies to the base portfolio currency. | instruments, portfolios, quotes, recipes, trade to portfolio rate, transactions |
+| [Using cut-labels to manage your business across different time-zones](<V3/product/ibor/Using cut-labels to manage your business across different time-zones.ipynb>) | Cut Labels | Demonstrates how to use cut labels to simplify timestamps and streamline usage of LUSID when used across multiple timezones. | cut labels, holdings, instruments, transactions |
+| [Valuation](<V3/product/ibor/Valuation.ipynb>) | Valuation | Demonstrates how to value a portfolio using a custom recipe. | valuation |
+| [Valuations with Inferred FX Rates](<V3/product/ibor/Valuations with Inferred FX Rates.ipynb>) | Valuations with Inferred FX Rates | Valuating with Inferred FX Rates | FX Rates |
+| [Valuations with recipes](<V3/product/ibor/Valuations with recipes.ipynb>) | Valuation with recipes | This notebook shows how to value a portfolio using recipes with different pricing sources | manifests, recipes, transactions, valuation |
+
+## V3/product/pms
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [Households](<V3/product/pms/Households.ipynb>) | Households | Demonstration of how to manage the holdings for an investor based on each Mandate & Household they are associated with. | aggregation, instruments, portfolio groups, portfolios, properties, quotes, set holdings |
+| [Rebalancing with a model portfolio](<V3/product/pms/Rebalancing with a model portfolio.ipynb>) | Rebalancing with a model portfolio | This notebook shows how you can automatically generate transactions to rebalance a transaction portfolio with a model portfolio | reference portfolios, transactions portfolios |
+| [Setting up a blended benchmark with floating weights](<V3/product/pms/Setting up a blended benchmark with floating weights.ipynb>) | Setting up a blended benchmark | Demonstration of how to load a blended benchmark. <br>We also show how floating weights with a periodic reset. | Floating weights, Reference portfolios, Securitised portfolios, Weights |
+
+## V3/university/T00000-Using-Python-with-LUSID
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [Basic Python scripting](<V3/university/T00000-Using-Python-with-LUSID/Basic Python scripting.ipynb>) | Basic Python scripting | An introduction to Python and writing some Python code. | python, variables, types, loops, functions, classes, objects, libraries |
+| [Using NumPy to efficiently work with large, multi-dimensional data](<V3/university/T00000-Using-Python-with-LUSID/Using NumPy to efficiently work with large, multi-dimensional data.ipynb>) | Using NumPy to efficiently work with large, multi-dimensional data | An introduction to NumPy and processing multi-dimensional arrays. | python, numpy, arrays, vectorised operations |
+| [Using Pandas to work with DataFrames](<V3/university/T00000-Using-Python-with-LUSID/Using Pandas to work with DataFrames.ipynb>) | Using Pandas to work with DataFrames | An introduction to the widely-used pandas library. | python, pandas, dataframes |
+| [Using the FINBOURNE Python SDKs](<V3/university/T00000-Using-Python-with-LUSID/Using the FINBOURNE Python SDKs.ipynb>) | Using the FINBOURNE Python SDKs | An introduction to the FINBOURNE Python SDKs and tools for interacting with LUSID in our hosted Jupyter environment. | python, sdk, Jupyter |
+| [What are Python and Jupyter_](<V3/university/T00000-Using-Python-with-LUSID/What are Python and Jupyter_.ipynb>) | What are Python and Jupyter? | An introduction to Python and Jupyter, which are commonly used to view and analyse data using short Python scripts. | python, Jupyter Notebooks |
+
+## V3/university/T01001-LUSID-core-concepts
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T01001-LUSID-core-concepts](<V3/university/T01001-LUSID-core-concepts/T01001-LUSID-core-concepts.ipynb>) | LUSID core concepts | Creating a portfolio containing equities, bonds and cash, trading positions, and viewing daily asset allocation. | portfolios, instruments, transactions, holdings, valuation, market data |
+
+## V3/university/T01002-Creating-an-instrument-master
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T01002-Creating-an-instrument-master](<V3/university/T01002-Creating-an-instrument-master/T01002-Creating-an-instrument-master.ipynb>) | Creating an instrument master | Populating the LUSID instrument master from different data sources. | portfolios, instruments, identifiers, data lineage |
+
+## V3/university/T01003-Setting-up-a-transaction-portfolio-with-strategies
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T01003-Setting-up-a-transaction-portfolio-with-strategies](<V3/university/T01003-Setting-up-a-transaction-portfolio-with-strategies/T01003-Setting-up-a-transaction-portfolio-with-strategies.ipynb>) | Setting up a transaction portfolio with strategies | Load transactions from two systems into separate investment strategies and calculate holdings grouped by strategy on trade date vs settlement date. | portfolios, instruments, transactions, holdings |
+
+## V3/university/T01005-Basic-portfolio-valuation
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T01005-Basic-portfolio-valuation](<V3/university/T01005-Basic-portfolio-valuation/T01005-Basic-portfolio-valuation.ipynb>) | Basic portfolio valuation | Populating the LUSID instrument master from different data sources. | portfolios, instruments, identifiers, data lineage |
+
+## V3/university/T01006-Introduction-to-transaction-configuration
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T01006-Breaking-out-broker-commission-as-a-separate-cash-holding](<V3/university/T01006-Introduction-to-transaction-configuration/T01006-Breaking-out-broker-commission-as-a-separate-cash-holding.ipynb>) | Breaking out broker commission as a separate cash holding | Create a holdings report that breaks out money paid in broker commissions on equity purchases into a separate cash holding. | properties, property definitions, SHKs |
+| [T01006-Ensuring-different-transaction-codes-have-the-same-economic-impact](<V3/university/T01006-Introduction-to-transaction-configuration/T01006-Ensuring-different-transaction-codes-have-the-same-economic-impact.ipynb>) | Ensuring different transaction codes have the same economic impact | Load transactions from different systems which use different transaction codes for the same economic activity and have LUSID apply a uniform economic impact when generating holdings. | transactions, aliases, holdings |
+| [T01006-Ensuring-the-same-transaction-code-has-different-economic-impacts](<V3/university/T01006-Introduction-to-transaction-configuration/T01006-Ensuring-the-same-transaction-code-has-different-economic-impacts.ipynb>) | Ensuring the same transaction code has different economic impacts | Load transactions from different systems which use the same  transaction code for the different economic activities and have LUSID apply the correct economic impact for each transaction when generating holdings. | transactions, aliases, holdings |
+| [T01006-Reducing-the-cash-balance-by-the-cost-of-broker-commission](<V3/university/T01006-Introduction-to-transaction-configuration/T01006-Reducing-the-cash-balance-by-the-cost-of-broker-commission.ipynb>) | Reducing the cash balance by the cost of broker commission | Creating custom transaction types to reduce cash balance by money paid out in broker commissions as well as the cost of equities purchased. | properties, property definitions, SHKs |
+
+## V3/university/T09001-EventsAndNotifications-WhatAreEvents
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T09001-EventsAndNotifications-WhatAreEvents](<V3/university/T09001-EventsAndNotifications-WhatAreEvents/T09001-EventsAndNotifications-WhatAreEvents.ipynb>) | Events and Notifications: What are events? | An introduction to events and event types in the Notification Service | notifications, events, subscriptions |
+
+## V3/university/T09002-EventsAndNotifications-SubscribingToEvents
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T09002-EventsAndNotifications-SubscribingToEvents](<V3/university/T09002-EventsAndNotifications-SubscribingToEvents/T09002-EventsAndNotifications-SubscribingToEvents.ipynb>) | Events and Notifications: Subscribing to events | An introduction to subscriptions and using the Notification API to subscribe to an event. | notifications, events, subscriptions, filtering |
+
+## V3/university/T09003-EventsAndNotifications-SendingNotifications
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T09003-EventsAndNotifications-SendingNotifications](<V3/university/T09003-EventsAndNotifications-SendingNotifications/T09003-EventsAndNotifications-SendingNotifications.ipynb>) | Events and Notifications: Sending notifications | An introduction to setting up email and SMS notifications using the Notification API. | notifications, events, email, SMS |
+
+## V3/university/T09004-EventsAndNotifications-SendingWebhooks
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T09004-EventsAndNotifications-SendingWebhooks](<V3/university/T09004-EventsAndNotifications-SendingWebhooks/T09004-EventsAndNotifications-SendingWebhooks.ipynb>) | Events and Notifications: Sending webhooks | An introduction to setting up internal and external webhooks using the Notification API. | notifications, events, webhook |
+
+## V3/university/T10001-WhatIsDrive
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T10001-WhatIsDrive](<V3/university/T10001-WhatIsDrive/T10001-WhatIsDrive.ipynb>) | What is a drive? | What is a drive? | Drive |
+
+## V3/university/T11001-WhatAreQuotes
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T11001-WhatAreQuotes](<V3/university/T11001-WhatAreQuotes/T11001-WhatAreQuotes.ipynb>) | What are Quotes? | What are quotes? | Quotes |
+
+## V3/university/T11002-WorkingWithQuotes
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T11002-WorkingWithQuotes](<V3/university/T11002-WorkingWithQuotes/T11002-WorkingWithQuotes.ipynb>) | Working with Quotes | Working with Quotes. | Quotes |
+
+## V3/university/T12001-Properties-LUSIDsExtensibleDataModel
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T12001-Properties-LUSIDsExtensibleDataModel](<V3/university/T12001-Properties-LUSIDsExtensibleDataModel/T12001-Properties-LUSIDsExtensibleDataModel.ipynb>) | Properties LUSIDs Extensible Date Model | LUSID, Models |  |
+
+## V3/university/T12002-Properties-DefiningProperties
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T12002-Properties-DefiningProperties](<V3/university/T12002-Properties-DefiningProperties/T12002-Properties-DefiningProperties.ipynb>) | Defining properties | An introduction to creating properties in LUSID. | property, property definition, data types |
+
+## V3/university/T12003-Properties-PopulatingPerpetualPropertyValues
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T12003-Properties-PopulatingPerpetualPropertyValues](<V3/university/T12003-Properties-PopulatingPerpetualPropertyValues/T12003-Properties-PopulatingPerpetualPropertyValues.ipynb>) | Populating perpetual property values | An introduction to creating perpetual properties and decorating a value on an entity. | property, property definition, perpetual property |
+
+## V3/university/T12004-Properties-PopulatingTimeVariantPropertyValues
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T12004-Properties-PopulatingTimeVariantPropertyValues](<V3/university/T12004-Properties-PopulatingTimeVariantPropertyValues/T12004-Properties-PopulatingTimeVariantPropertyValues.ipynb>) | Populating time-variant property values | An introduction to creating time-variant properties and decorating a value on an entity. | property, property definition, perpetual property |
+
+## V3/university/T12005-Properties-ViewingAPropertysHistory
+| filename | title | description | features |
+| --- | --- | --- | --- |
+| [T12005-Properties-ViewingAPropertysHistory](<V3/university/T12005-Properties-ViewingAPropertysHistory/T12005-Properties-ViewingAPropertysHistory.ipynb>) | Viewing a property's history | An introduction to viewing the bitemporal history of a property value. | property value, bitemporality, asAt, effectiveAt |
+
 # V2
 
 ## Installing Requirements for V2 Notebooks
