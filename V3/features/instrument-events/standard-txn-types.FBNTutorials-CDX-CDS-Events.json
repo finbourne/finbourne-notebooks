@@ -1,0 +1,2224 @@
+{
+    "deploymentId": "standard_txn_types_FBNTutorials-CDX-CDS-Events",
+    "resources": [
+        {
+            "resourceType": "DefinitionRef",
+            "resourceId": "notionalamount",
+            "writeControl": null,
+            "value": {
+                "domain": "Transaction",
+                "scope": "default",
+                "code": "NotionalAmount"
+            },
+            "dependencies": []
+        },
+        {
+            "resourceType": "DefinitionRef",
+            "resourceId": "taxlotselectionmethod",
+            "writeControl": null,
+            "value": {
+                "domain": "TransactionConfiguration",
+                "scope": "default",
+                "code": "TaxLotSelectionMethod"
+            },
+            "dependencies": []
+        },
+        {
+            "resourceType": "DefinitionRef",
+            "resourceId": "cashflowtype",
+            "writeControl": null,
+            "value": {
+                "domain": "TransactionConfiguration",
+                "scope": "default",
+                "code": "CashFlowType"
+            },
+            "dependencies": []
+        },
+        {
+            "resourceType": "DefinitionRef",
+            "resourceId": "instrumenteventtype",
+            "writeControl": null,
+            "value": {
+                "domain": "TransactionConfiguration",
+                "scope": "default",
+                "code": "InstrumentEventType"
+            },
+            "dependencies": []
+        },
+        {
+            "resourceType": "DefinitionRef",
+            "resourceId": "allocationmethod",
+            "writeControl": null,
+            "value": {
+                "domain": "TransactionConfiguration",
+                "scope": "default",
+                "code": "AllocationMethod"
+            },
+            "dependencies": []
+        },
+        {
+            "resourceType": "DataTypeRef",
+            "resourceId": "default_number",
+            "writeControl": null,
+            "value": {
+                "scope": "system",
+                "code": "number"
+            },
+            "dependencies": []
+        },
+        {
+            "resourceType": "DefinitionResource",
+            "resourceId": "commission",
+            "writeControl": 4,
+            "value": {
+                "domain": "Transaction",
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "code": "Commission",
+                "displayName": "Commission",
+                "dataTypeId": {
+                    "$ref": "default_number"
+                },
+                "propertyDescription": "[Commission]",
+                "lifeTime": "Perpetual",
+                "constraintStyle": "Property"
+            },
+            "dependencies": [
+                "default_number"
+            ]
+        },
+        {
+            "resourceType": "DataTypeRef",
+            "resourceId": "default_string",
+            "writeControl": null,
+            "value": {
+                "scope": "system",
+                "code": "string"
+            },
+            "dependencies": []
+        },
+        {
+            "resourceType": "DefinitionResource",
+            "resourceId": "fees",
+            "writeControl": 4,
+            "value": {
+                "domain": "Transaction",
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "code": "Fees",
+                "displayName": "Fund Fees",
+                "dataTypeId": {
+                    "$ref": "default_string"
+                },
+                "propertyDescription": "Fund Fees",
+                "lifeTime": "Perpetual",
+                "constraintStyle": "Property"
+            },
+            "dependencies": [
+                "default_string"
+            ]
+        },
+        {
+            "resourceType": "SideResource",
+            "resourceId": "side1",
+            "writeControl": 4,
+            "value": {
+                "side": "Side1",
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "security": "Txn:LusidInstrumentId",
+                "currency": "Txn:TradeCurrency",
+                "rate": "Txn:TradeToPortfolioRate",
+                "units": "Txn:Units",
+                "amount": "Txn:TradeAmount",
+                "notionalAmount": {
+                    "$ref": "notionalamount"
+                }
+            },
+            "dependencies": [
+                "notionalamount"
+            ]
+        },
+        {
+            "resourceType": "SideResource",
+            "resourceId": "signed_side1",
+            "writeControl": 4,
+            "value": {
+                "side": "SignedSide1",
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "security": "Txn:LusidInstrumentId",
+                "currency": "Txn:TradeCurrency",
+                "rate": "Txn:TradeToPortfolioRate",
+                "units": "Txn:Units",
+                "amount": "Txn:TotalConsiderationInTradeCurrency",
+                "notionalAmount": {
+                    "$ref": "notionalamount"
+                }
+            },
+            "dependencies": [
+                "notionalamount"
+            ]
+        },
+        {
+            "resourceType": "SideResource",
+            "resourceId": "side2",
+            "writeControl": 4,
+            "value": {
+                "side": "Side2",
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "security": "Txn:SettleCcy",
+                "currency": "Txn:SettlementCurrency",
+                "rate": "SettledToPortfolioRate",
+                "units": "Txn:TotalConsideration",
+                "amount": "Txn:TotalConsideration",
+                "notionalAmount": "0"
+            },
+            "dependencies": []
+        },
+        {
+            "resourceType": "SideResource",
+            "resourceId": "carry_non_cap_fee",
+            "writeControl": 4,
+            "value": {
+                "side": "CarryNonCapFee",
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "security": "Txn:LusidInstrumentId",
+                "currency": "Txn:TradeCurrency",
+                "rate": "Txn:TradeToPortfolioRate",
+                "units": "Txn:TotalNonCapitalisedFees",
+                "amount": "Txn:TotalNonCapitalisedFees",
+                "notionalAmount": "0"
+            },
+            "dependencies": []
+        },
+        {
+            "resourceType": "SideResource",
+            "resourceId": "AccruedInterest",
+            "writeControl": 4,
+            "value": {
+                "side": "AccruedInterest",
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "security": "Txn:LusidInstrumentId",
+                "currency": "Txn:SettlementCurrency",
+                "rate": "SettledToPortfolioRate",
+                "units": "0",
+                "amount": "Txn:BondInterest",
+                "notionalAmount": "0"
+            },
+            "dependencies": []
+        },
+        {
+            "resourceType": "SideResource",
+            "resourceId": "Future_Asset_Buy",
+            "writeControl": 4,
+            "value": {
+                "side": "Future_Asset_Buy",
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "security": "Txn:LusidInstrumentId",
+                "currency": "Txn:TradeCurrency",
+                "rate": "Txn:TradeToPortfolioRate",
+                "units": "Txn:Units",
+                "amount": "-Txn:TotalConsiderationInTradeCurrency",
+                "notionalAmount": {
+                    "$ref": "notionalamount"
+                }
+            },
+            "dependencies": [
+                "notionalamount"
+            ]
+        },
+        {
+            "resourceType": "SideResource",
+            "resourceId": "Future_Asset_Sell",
+            "writeControl": 4,
+            "value": {
+                "side": "Future_Asset_Sell",
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "security": "Txn:LusidInstrumentId",
+                "currency": "Txn:TradeCurrency",
+                "rate": "Txn:TradeToPortfolioRate",
+                "units": "Txn:Units",
+                "amount": "Txn:TotalConsiderationInTradeCurrency",
+                "notionalAmount": {
+                    "$ref": "notionalamount"
+                }
+            },
+            "dependencies": [
+                "notionalamount"
+            ]
+        },
+        {
+            "resourceType": "SideResource",
+            "resourceId": "Payable_BrokerCash_Commission_On_Future",
+            "writeControl": 4,
+            "value": {
+                "side": "Payable_BrokerCash_Commission_On_Future",
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "security": "Txn:SettleCcy",
+                "currency": "Txn:TradeCurrency",
+                "rate": "Txn:TradeToPortfolioRate",
+                "units": {
+                    "$ref": "commission"
+                },
+                "amount": {
+                    "$ref": "commission"
+                },
+                "notionalAmount": "0"
+            },
+            "dependencies": [
+                "commission",
+                "commission"
+            ]
+        },
+        {
+            "resourceType": "SideResource",
+            "resourceId": "PL_Movement_Future_Commission",
+            "writeControl": 4,
+            "value": {
+                "side": "PL_Movement_Future_Commission",
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "security": "Txn:LusidInstrumentId",
+                "currency": "Txn:TradeCurrency",
+                "rate": "Txn:TradeToPortfolioRate",
+                "units": {
+                    "$ref": "commission"
+                },
+                "amount": {
+                    "$ref": "commission"
+                },
+                "notionalAmount": "0"
+            },
+            "dependencies": [
+                "commission",
+                "commission"
+            ]
+        },
+        {
+            "resourceType": "SideResource",
+            "resourceId": "Broker_Cash_Real_On_Future",
+            "writeControl": 4,
+            "value": {
+                "side": "Broker_Cash_Real_On_Future",
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "security": "Txn:SettleCcy",
+                "currency": "Txn:TradeCurrency",
+                "rate": "Txn:TradeToPortfolioRate",
+                "units": "Txn:GrossConsideration",
+                "amount": "Txn:GrossConsideration",
+                "notionalAmount": "0"
+            },
+            "dependencies": []
+        },
+        {
+            "resourceType": "SideResource",
+            "resourceId": "Protection",
+            "writeControl": 4,
+            "value": {
+                "side": "Protection",
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "security": "Txn:LusidInstrumentId",
+                "currency": "Txn:TradeCurrency",
+                "rate": "Txn:TradeToPortfolioRate",
+                "units": "Txn:Units",
+                "amount": "BaseOnSeparateBondInterest",
+                "notionalAmount": "0"
+            },
+            "dependencies": []
+        },
+        {
+            "resourceType": "SideResource",
+            "resourceId": "FxExpiry",
+            "writeControl": 4,
+            "value": {
+                "side": "FxExpiry",
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "security": "Txn:LusidInstrumentId",
+                "currency": "Txn:TradeCurrency",
+                "rate": "Txn:TradeToPortfolioRate",
+                "units": "Txn:Units",
+                "amount": "Txn:TotalConsideration",
+                "notionalAmount": "0"
+            },
+            "dependencies": []
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "funds_in",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "FundsIn",
+                        "description": "Deposit new funds",
+                        "transactionClass": "Funding",
+                        "transactionRoles": "Longer",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "CashReceivable",
+                        "side": {
+                            "$ref": "side1"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Receivable_Cash_Subscription",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "Capital",
+                        "side": {
+                            "$ref": "side1"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Capital_Movement_Subscription",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    }
+                ]
+            },
+            "dependencies": [
+                "side1"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "funds_out",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "FundsOut",
+                        "description": "Withdraw funds",
+                        "transactionClass": "Funding",
+                        "transactionRoles": "Shorter",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "CashReceivable",
+                        "side": {
+                            "$ref": "side1"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Payable_Cash_Redemption",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "Capital",
+                        "side": {
+                            "$ref": "side1"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Capital_Movement_Redemption",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    }
+                ]
+            },
+            "dependencies": [
+                "side1"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "buy",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "Buy",
+                        "description": "Purchase",
+                        "transactionClass": "Trading",
+                        "transactionRoles": "LongLonger",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "StockMovement",
+                        "side": {
+                            "$ref": "side1"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Purchase",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "CashCommitment",
+                        "side": {
+                            "$ref": "side2"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Payable_Cash_Trade",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "Carry",
+                        "side": {
+                            "$ref": "carry_non_cap_fee"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Fees",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "Carry",
+                        "side": {
+                            "$ref": "AccruedInterest"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "PurchasedInterest",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    },
+                    {
+                        "type": "Txn:ExchangeRate"
+                    },
+                    {
+                        "type": "Txn:NotionalAmount"
+                    },
+                    {
+                        "type": "Txn:BondInterest"
+                    },
+                    {
+                        "type": "Txn:GrossConsideration"
+                    },
+                    {
+                        "type": "DeriveTotalConsideration",
+                        "formula": "Txn:GrossConsideration + Txn:TotalFees"
+                    }
+                ]
+            },
+            "dependencies": [
+                "side1",
+                "side2",
+                "carry_non_cap_fee",
+                "AccruedInterest"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "sell",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "Sell",
+                        "description": "Sell",
+                        "transactionClass": "Trading",
+                        "transactionRoles": "LongShorter",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "StockMovement",
+                        "side": {
+                            "$ref": "side1"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Sale",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "CashCommitment",
+                        "side": {
+                            "$ref": "side2"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Receivable_Cash_Trade",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "Carry",
+                        "side": {
+                            "$ref": "carry_non_cap_fee"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Fees",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "Carry",
+                        "side": {
+                            "$ref": "AccruedInterest"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "SoldInterest",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    },
+                    {
+                        "type": "Txn:ExchangeRate"
+                    },
+                    {
+                        "type": "Txn:NotionalAmount"
+                    },
+                    {
+                        "type": "Txn:BondInterest"
+                    },
+                    {
+                        "type": "Txn:GrossConsideration"
+                    },
+                    {
+                        "type": "DeriveTotalConsideration",
+                        "formula": "Txn:GrossConsideration - Txn:TotalFees"
+                    }
+                ]
+            },
+            "dependencies": [
+                "side1",
+                "side2",
+                "carry_non_cap_fee",
+                "AccruedInterest"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "cover_short",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "CoverShort",
+                        "description": "Cover Short",
+                        "transactionClass": "Trading",
+                        "transactionRoles": "ShortLonger",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "StockMovement",
+                        "side": {
+                            "$ref": "side1"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Cover Short",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "CashCommitment",
+                        "side": {
+                            "$ref": "side2"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Payable_Cash_Trade",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "Carry",
+                        "side": {
+                            "$ref": "carry_non_cap_fee"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Fees",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "Carry",
+                        "side": {
+                            "$ref": "AccruedInterest"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "PurchasedInterest",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    },
+                    {
+                        "type": "Txn:ExchangeRate"
+                    },
+                    {
+                        "type": "Txn:NotionalAmount"
+                    },
+                    {
+                        "type": "Txn:BondInterest"
+                    },
+                    {
+                        "type": "Txn:GrossConsideration"
+                    },
+                    {
+                        "type": "DeriveTotalConsideration",
+                        "formula": "Txn:GrossConsideration + Txn:TotalFees"
+                    }
+                ]
+            },
+            "dependencies": [
+                "side1",
+                "side2",
+                "carry_non_cap_fee",
+                "AccruedInterest"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "sell_short",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "SellShort",
+                        "description": "Sell Short",
+                        "transactionClass": "Trading",
+                        "transactionRoles": "ShortShorter",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "StockMovement",
+                        "side": {
+                            "$ref": "side1"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "ShortSale",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "CashCommitment",
+                        "side": {
+                            "$ref": "side2"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Receivable_Cash_Trade",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "Carry",
+                        "side": {
+                            "$ref": "carry_non_cap_fee"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Fees",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "Carry",
+                        "side": {
+                            "$ref": "AccruedInterest"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "SoldInterest",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    },
+                    {
+                        "type": "Txn:ExchangeRate"
+                    },
+                    {
+                        "type": "Txn:NotionalAmount"
+                    },
+                    {
+                        "type": "Txn:BondInterest"
+                    },
+                    {
+                        "type": "Txn:GrossConsideration"
+                    },
+                    {
+                        "type": "DeriveTotalConsideration",
+                        "formula": "Txn:GrossConsideration - Txn:TotalFees"
+                    }
+                ]
+            },
+            "dependencies": [
+                "side1",
+                "side2",
+                "carry_non_cap_fee",
+                "AccruedInterest"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "buy_future",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "BuyFuture",
+                        "description": "Buy Future",
+                        "transactionClass": "Future",
+                        "transactionRoles": "LongLonger",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "StockMovement",
+                        "side": {
+                            "$ref": "Future_Asset_Buy"
+                        },
+                        "direction": 1,
+                        "properties": [
+                            {
+                                "propertyKey": {
+                                    "$ref": "taxlotselectionmethod"
+                                },
+                                "labelValue": "FirstInFirstOut"
+                            }
+                        ],
+                        "mappings": [],
+                        "name": "Future Asset Buy",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "CashCommitment",
+                        "side": {
+                            "$ref": "Payable_BrokerCash_Commission_On_Future"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Payable_BrokerCash_Commission_On_Future",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "Carry",
+                        "side": {
+                            "$ref": "PL_Movement_Future_Commission"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "PL_Movement_Future_Commission",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "CashCommitment",
+                        "side": {
+                            "$ref": "Broker_Cash_Real_On_Future"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Broker_Cash_Real_On_Future",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    },
+                    {
+                        "type": "Txn:ExchangeRate"
+                    },
+                    {
+                        "type": "Txn:NotionalAmount"
+                    },
+                    {
+                        "type": "Txn:GrossConsideration"
+                    },
+                    {
+                        "type": "DeriveTotalConsideration",
+                        "formula": "Txn:GrossConsideration - Properties[Transaction/FBNTutorials-CDX-CDS-Events/Commission]"
+                    }
+                ]
+            },
+            "dependencies": [
+                "Future_Asset_Buy",
+                "taxlotselectionmethod",
+                "Payable_BrokerCash_Commission_On_Future",
+                "PL_Movement_Future_Commission",
+                "Broker_Cash_Real_On_Future"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "sell_future",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "SellFuture",
+                        "description": "Sell Future",
+                        "transactionClass": "Future",
+                        "transactionRoles": "LongShorter",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "StockMovement",
+                        "side": {
+                            "$ref": "Future_Asset_Sell"
+                        },
+                        "direction": -1,
+                        "properties": [
+                            {
+                                "propertyKey": {
+                                    "$ref": "taxlotselectionmethod"
+                                },
+                                "labelValue": "FirstInFirstOut"
+                            }
+                        ],
+                        "mappings": [],
+                        "name": "Future Asset Sell",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "CashCommitment",
+                        "side": {
+                            "$ref": "Payable_BrokerCash_Commission_On_Future"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Payable_BrokerCash_Commission_On_Future",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "Carry",
+                        "side": {
+                            "$ref": "PL_Movement_Future_Commission"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "PL_Movement_Future_Commission",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "CashCommitment",
+                        "side": {
+                            "$ref": "Broker_Cash_Real_On_Future"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Broker_Cash_Real_On_Future",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    },
+                    {
+                        "type": "Txn:ExchangeRate"
+                    },
+                    {
+                        "type": "Txn:NotionalAmount"
+                    },
+                    {
+                        "type": "Txn:GrossConsideration"
+                    },
+                    {
+                        "type": "DeriveTotalConsideration",
+                        "formula": "Txn:GrossConsideration - Properties[Transaction/FBNTutorials-CDX-CDS-Events/Commission]"
+                    }
+                ]
+            },
+            "dependencies": [
+                "Future_Asset_Sell",
+                "taxlotselectionmethod",
+                "Payable_BrokerCash_Commission_On_Future",
+                "PL_Movement_Future_Commission",
+                "Broker_Cash_Real_On_Future"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "sell_short_future",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "SellShortFuture",
+                        "description": "Sell Short Future",
+                        "transactionClass": "Future",
+                        "transactionRoles": "ShortShorter",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "StockMovement",
+                        "side": {
+                            "$ref": "Future_Asset_Sell"
+                        },
+                        "direction": -1,
+                        "properties": [
+                            {
+                                "propertyKey": {
+                                    "$ref": "taxlotselectionmethod"
+                                },
+                                "labelValue": "FirstInFirstOut"
+                            }
+                        ],
+                        "mappings": [],
+                        "name": "Future Asset Sell",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "CashCommitment",
+                        "side": {
+                            "$ref": "Payable_BrokerCash_Commission_On_Future"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Payable_BrokerCash_Commission_On_Future",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "Carry",
+                        "side": {
+                            "$ref": "PL_Movement_Future_Commission"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "PL_Movement_Future_Commission",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "CashCommitment",
+                        "side": {
+                            "$ref": "Broker_Cash_Real_On_Future"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Broker_Cash_Real_On_Future",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    },
+                    {
+                        "type": "Txn:ExchangeRate"
+                    },
+                    {
+                        "type": "Txn:NotionalAmount"
+                    },
+                    {
+                        "type": "Txn:GrossConsideration"
+                    },
+                    {
+                        "type": "DeriveTotalConsideration",
+                        "formula": "Txn:GrossConsideration - Properties[Transaction/FBNTutorials-CDX-CDS-Events/Commission]"
+                    }
+                ]
+            },
+            "dependencies": [
+                "Future_Asset_Sell",
+                "taxlotselectionmethod",
+                "Payable_BrokerCash_Commission_On_Future",
+                "PL_Movement_Future_Commission",
+                "Broker_Cash_Real_On_Future"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "cover_short_future",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "CoverShortFuture",
+                        "description": "Cover Short Future",
+                        "transactionClass": "Future",
+                        "transactionRoles": "ShortLonger",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "StockMovement",
+                        "side": {
+                            "$ref": "Future_Asset_Buy"
+                        },
+                        "direction": 1,
+                        "properties": [
+                            {
+                                "propertyKey": {
+                                    "$ref": "taxlotselectionmethod"
+                                },
+                                "labelValue": "FirstInFirstOut"
+                            }
+                        ],
+                        "mappings": [],
+                        "name": "Future Asset Buy",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "CashCommitment",
+                        "side": {
+                            "$ref": "Payable_BrokerCash_Commission_On_Future"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Payable_BrokerCash_Commission_On_Future",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "Carry",
+                        "side": {
+                            "$ref": "PL_Movement_Future_Commission"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "PL_Movement_Future_Commission",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "CashCommitment",
+                        "side": {
+                            "$ref": "Broker_Cash_Real_On_Future"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Broker_Cash_Real_On_Future",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    },
+                    {
+                        "type": "Txn:ExchangeRate"
+                    },
+                    {
+                        "type": "Txn:NotionalAmount"
+                    },
+                    {
+                        "type": "Txn:GrossConsideration"
+                    },
+                    {
+                        "type": "DeriveTotalConsideration",
+                        "formula": "Txn:GrossConsideration - Properties[Transaction/FBNTutorials-CDX-CDS-Events/Commission]"
+                    }
+                ]
+            },
+            "dependencies": [
+                "Future_Asset_Buy",
+                "taxlotselectionmethod",
+                "Payable_BrokerCash_Commission_On_Future",
+                "PL_Movement_Future_Commission",
+                "Broker_Cash_Real_On_Future"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "buy_protection",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "BuyProtection",
+                        "description": "Buy Protection",
+                        "transactionClass": "CreditDefaultSwap",
+                        "transactionRoles": "Longer",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "StockMovement",
+                        "side": {
+                            "$ref": "Protection"
+                        },
+                        "direction": 1,
+                        "properties": [
+                            {
+                                "propertyKey": {
+                                    "$ref": "taxlotselectionmethod"
+                                },
+                                "labelValue": "FirstInFirstOut"
+                            }
+                        ],
+                        "mappings": [],
+                        "name": "Buy Protection",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "CashCommitment",
+                        "side": {
+                            "$ref": "side2"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Cash",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "Carry",
+                        "side": {
+                            "$ref": "AccruedInterest"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Bought / Sold Interest",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    },
+                    {
+                        "type": "Txn:ExchangeRate"
+                    },
+                    {
+                        "type": "Txn:NotionalAmount"
+                    },
+                    {
+                        "type": "Txn:BondInterest"
+                    },
+                    {
+                        "type": "Txn:GrossConsideration"
+                    },
+                    {
+                        "type": "DeriveTotalConsideration",
+                        "formula": "Txn:GrossConsideration"
+                    }
+                ]
+            },
+            "dependencies": [
+                "Protection",
+                "taxlotselectionmethod",
+                "side2",
+                "AccruedInterest"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "sell_protection",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "SellProtection",
+                        "description": "Sell Protection",
+                        "transactionClass": "CreditDefaultSwap",
+                        "transactionRoles": "Shorter",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "StockMovement",
+                        "side": {
+                            "$ref": "Protection"
+                        },
+                        "direction": -1,
+                        "properties": [
+                            {
+                                "propertyKey": {
+                                    "$ref": "taxlotselectionmethod"
+                                },
+                                "labelValue": "FirstInFirstOut"
+                            }
+                        ],
+                        "mappings": [],
+                        "name": "Sell Protection",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "CashCommitment",
+                        "side": {
+                            "$ref": "side2"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Cash",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "Carry",
+                        "side": {
+                            "$ref": "AccruedInterest"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Interest Bought / Sold",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    },
+                    {
+                        "type": "Txn:ExchangeRate"
+                    },
+                    {
+                        "type": "Txn:NotionalAmount"
+                    },
+                    {
+                        "type": "Txn:BondInterest"
+                    },
+                    {
+                        "type": "Txn:GrossConsideration"
+                    },
+                    {
+                        "type": "DeriveTotalConsideration",
+                        "formula": "Txn:GrossConsideration"
+                    }
+                ]
+            },
+            "dependencies": [
+                "Protection",
+                "taxlotselectionmethod",
+                "side2",
+                "AccruedInterest"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "prime_transfer_in",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "PrimeTransferIn",
+                        "description": "Prime Transfer In",
+                        "transactionClass": "Transfer",
+                        "transactionRoles": "Longer",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "CashReceivable",
+                        "side": {
+                            "$ref": "side1"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Prime Transfer In",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    }
+                ]
+            },
+            "dependencies": [
+                "side1"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "prime_transfer_out",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "PrimeTransferOut",
+                        "description": "Prime Transfer Out",
+                        "transactionClass": "Transfer",
+                        "transactionRoles": "Shorter",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "CashReceivable",
+                        "side": {
+                            "$ref": "side1"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Prime Transfer Out",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    }
+                ]
+            },
+            "dependencies": [
+                "side1"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "fx_booking",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "FXBooking",
+                        "description": "Used to book FX Forwards using the Instrument model",
+                        "transactionClass": "FXBooking",
+                        "transactionRoles": "AllRoles",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "StockMovement",
+                        "side": {
+                            "$ref": "side1"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": []
+            },
+            "dependencies": [
+                "side1"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "fx_spot",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "FXSpot",
+                        "description": "Used to book FX Spots",
+                        "transactionClass": "FXSpot",
+                        "transactionRoles": "AllRoles",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "CashCommitment",
+                        "side": {
+                            "$ref": "side1"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "FxSpotBuyLeg",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "CashCommitment",
+                        "side": {
+                            "$ref": "side2"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "FxSpotSellLeg",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": []
+            },
+            "dependencies": [
+                "side1",
+                "side2"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "dividend_income",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "DividendIncome",
+                        "description": "Cash dividend",
+                        "transactionClass": "Dividend",
+                        "transactionRoles": "Longer",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "CashAccrual",
+                        "side": {
+                            "$ref": "side2"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Increase cash balance",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "Carry",
+                        "side": {
+                            "$ref": "side1"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Report income as a flow out of the security",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    }
+                ]
+            },
+            "dependencies": [
+                "side2",
+                "side1"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "dividend_expense",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "DividendExpense",
+                        "description": "Cash dividend expense",
+                        "transactionClass": "Dividend",
+                        "transactionRoles": "Shorter",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "CashAccrual",
+                        "side": {
+                            "$ref": "side2"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Decrease cash balance",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "Carry",
+                        "side": {
+                            "$ref": "side1"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Report expense as a flow into the security",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    }
+                ]
+            },
+            "dependencies": [
+                "side2",
+                "side1"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "fx_expiry",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "FXExpiry",
+                        "description": "Reduces cash units to represent an FX Spot or Forward expiry / maturity",
+                        "transactionClass": "FXExpiry",
+                        "transactionRoles": "AllRoles",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "StockMovement",
+                        "side": {
+                            "$ref": "FxExpiry"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "FX Expiry",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    }
+                ]
+            },
+            "dependencies": [
+                "FxExpiry"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "coupon",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "BondCoupon",
+                        "description": "Coupon payment",
+                        "transactionClass": "BondIncome",
+                        "transactionRoles": "AllRoles",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "CashAccrual",
+                        "side": {
+                            "$ref": "side2"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Coupon Payment",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "Carry",
+                        "side": {
+                            "$ref": "side1"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Income",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    }
+                ]
+            },
+            "dependencies": [
+                "side2",
+                "side1"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "bond_principal",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "BondPrincipal",
+                        "description": "Bond principal repayment",
+                        "transactionClass": "BondPrincipal",
+                        "transactionRoles": "AllRoles",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "CashReceivable",
+                        "side": {
+                            "$ref": "side2"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Return principal",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "StockMovement",
+                        "side": {
+                            "$ref": "side1"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Reduce cost without reducing units",
+                        "movementOptions": [
+                            "Virtual"
+                        ],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    }
+                ]
+            },
+            "dependencies": [
+                "side2",
+                "side1"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "maturity",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "Maturity",
+                        "description": "Maturity",
+                        "transactionClass": "Maturity",
+                        "transactionRoles": "AllRoles",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "StockMovement",
+                        "side": {
+                            "$ref": "side1"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Set units to zero",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    }
+                ]
+            },
+            "dependencies": [
+                "side1"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "early_redemption",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "BondEarlyRedemption",
+                        "description": "Early redemption of a bond",
+                        "transactionClass": "BondEarlyRedemption",
+                        "transactionRoles": "AllRoles",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "CashReceivable",
+                        "side": {
+                            "$ref": "side2"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Principal returned",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "StockMovement",
+                        "side": {
+                            "$ref": "side1"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Reduce units",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    }
+                ]
+            },
+            "dependencies": [
+                "side2",
+                "side1"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "bond_early_redemption_accrued",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "BondEarlyRedemptionAccrued",
+                        "description": "Return of accrued interest",
+                        "transactionClass": "BondEarlyRedemptionAccrued",
+                        "transactionRoles": "AllRoles",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "CashReceivable",
+                        "side": {
+                            "$ref": "side2"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Accrued interest returned",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "Carry",
+                        "side": {
+                            "$ref": "side1"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Income",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    }
+                ]
+            },
+            "dependencies": [
+                "side2",
+                "side1"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "credit_premium_cash_flow",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "CreditPremiumCashFlow",
+                        "description": "Credit premium cash flow event",
+                        "transactionClass": "CreditDefaultSwapPremium",
+                        "transactionRoles": "AllRoles",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "CashCommitment",
+                        "side": {
+                            "$ref": "side2"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Premium payment",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "Carry",
+                        "side": {
+                            "$ref": "signed_side1"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Premium payment carry",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    }
+                ]
+            },
+            "dependencies": [
+                "side2",
+                "signed_side1"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "protection_payout_cash_flow",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "ProtectionPayoutCashFlow",
+                        "description": "Protection payout cash flow",
+                        "transactionClass": "CreditDefaultSwapProtectionPayout",
+                        "transactionRoles": "AllRoles",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "CashReceivable",
+                        "side": {
+                            "$ref": "side2"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Protection payout",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "Carry",
+                        "side": {
+                            "$ref": "signed_side1"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Protection payout carry",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    }
+                ]
+            },
+            "dependencies": [
+                "side2",
+                "signed_side1"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "fee_accrual",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "FeeAccrual",
+                        "description": "Fund fee accrual",
+                        "transactionClass": "FeeAccrual",
+                        "transactionRoles": "AllRoles",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "CashAccrual",
+                        "side": {
+                            "$ref": "side1"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [
+                            {
+                                "propertyKey": {
+                                    "$ref": "fees"
+                                },
+                                "setTo": "Fees"
+                            }
+                        ],
+                        "name": "Fee accrual",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "Fee",
+                        "side": {
+                            "$ref": "side1"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Fee accrual",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    }
+                ]
+            },
+            "dependencies": [
+                "side1",
+                "fees"
+            ]
+        },
+        {
+            "resourceType": "TransactionTypeResource",
+            "resourceId": "fee_payment",
+            "writeControl": 4,
+            "value": {
+                "scope": "FBNTutorials-CDX-CDS-Events",
+                "source": "default",
+                "aliases": [
+                    {
+                        "type": "FeePayment",
+                        "description": "Fund fee payment",
+                        "transactionClass": "FeePayment",
+                        "transactionRoles": "AllRoles",
+                        "isDefault": false
+                    }
+                ],
+                "movements": [
+                    {
+                        "movementTypes": "CashCommitment",
+                        "side": {
+                            "$ref": "side1"
+                        },
+                        "direction": -1,
+                        "properties": [],
+                        "mappings": [],
+                        "name": "Fee payment",
+                        "movementOptions": [],
+                        "condition": ""
+                    },
+                    {
+                        "movementTypes": "CashAccrual",
+                        "side": {
+                            "$ref": "side1"
+                        },
+                        "direction": 1,
+                        "properties": [],
+                        "mappings": [
+                            {
+                                "propertyKey": {
+                                    "$ref": "fees"
+                                },
+                                "setTo": "Fees"
+                            }
+                        ],
+                        "name": "Reverse fee accrual",
+                        "movementOptions": [],
+                        "condition": ""
+                    }
+                ],
+                "properties": [],
+                "calculations": [
+                    {
+                        "type": "Txn:TradeToPortfolioRate"
+                    }
+                ]
+            },
+            "dependencies": [
+                "side1",
+                "fees"
+            ]
+        }
+    ]
+}
