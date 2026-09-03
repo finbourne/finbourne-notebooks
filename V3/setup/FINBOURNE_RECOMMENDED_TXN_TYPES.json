@@ -1,5 +1,5 @@
 {
-    "deploymentId": "standard_txn_types_FBNTutorials-CDX-CDS-Events",
+    "deploymentId": "FINBOURNE_RECOMMENDED_TXN_TYPES",
     "resources": [
         {
             "resourceType": "DefinitionRef",
@@ -72,7 +72,7 @@
             "writeControl": 4,
             "value": {
                 "domain": "Transaction",
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "code": "Commission",
                 "displayName": "Commission",
                 "dataTypeId": {
@@ -102,7 +102,7 @@
             "writeControl": 4,
             "value": {
                 "domain": "Transaction",
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "code": "Fees",
                 "displayName": "Fund Fees",
                 "dataTypeId": {
@@ -122,7 +122,7 @@
             "writeControl": 4,
             "value": {
                 "side": "Side1",
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "security": "Txn:LusidInstrumentId",
                 "currency": "Txn:TradeCurrency",
                 "rate": "Txn:TradeToPortfolioRate",
@@ -142,7 +142,7 @@
             "writeControl": 4,
             "value": {
                 "side": "SignedSide1",
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "security": "Txn:LusidInstrumentId",
                 "currency": "Txn:TradeCurrency",
                 "rate": "Txn:TradeToPortfolioRate",
@@ -162,7 +162,7 @@
             "writeControl": 4,
             "value": {
                 "side": "Side2",
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "security": "Txn:SettleCcy",
                 "currency": "Txn:SettlementCurrency",
                 "rate": "SettledToPortfolioRate",
@@ -178,7 +178,7 @@
             "writeControl": 4,
             "value": {
                 "side": "CarryNonCapFee",
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "security": "Txn:LusidInstrumentId",
                 "currency": "Txn:TradeCurrency",
                 "rate": "Txn:TradeToPortfolioRate",
@@ -194,7 +194,7 @@
             "writeControl": 4,
             "value": {
                 "side": "AccruedInterest",
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "security": "Txn:LusidInstrumentId",
                 "currency": "Txn:SettlementCurrency",
                 "rate": "SettledToPortfolioRate",
@@ -210,7 +210,7 @@
             "writeControl": 4,
             "value": {
                 "side": "Future_Asset_Buy",
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "security": "Txn:LusidInstrumentId",
                 "currency": "Txn:TradeCurrency",
                 "rate": "Txn:TradeToPortfolioRate",
@@ -230,7 +230,7 @@
             "writeControl": 4,
             "value": {
                 "side": "Future_Asset_Sell",
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "security": "Txn:LusidInstrumentId",
                 "currency": "Txn:TradeCurrency",
                 "rate": "Txn:TradeToPortfolioRate",
@@ -250,7 +250,7 @@
             "writeControl": 4,
             "value": {
                 "side": "Payable_BrokerCash_Commission_On_Future",
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "security": "Txn:SettleCcy",
                 "currency": "Txn:TradeCurrency",
                 "rate": "Txn:TradeToPortfolioRate",
@@ -273,7 +273,7 @@
             "writeControl": 4,
             "value": {
                 "side": "PL_Movement_Future_Commission",
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "security": "Txn:LusidInstrumentId",
                 "currency": "Txn:TradeCurrency",
                 "rate": "Txn:TradeToPortfolioRate",
@@ -296,7 +296,7 @@
             "writeControl": 4,
             "value": {
                 "side": "Broker_Cash_Real_On_Future",
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "security": "Txn:SettleCcy",
                 "currency": "Txn:TradeCurrency",
                 "rate": "Txn:TradeToPortfolioRate",
@@ -312,7 +312,7 @@
             "writeControl": 4,
             "value": {
                 "side": "Protection",
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "security": "Txn:LusidInstrumentId",
                 "currency": "Txn:TradeCurrency",
                 "rate": "Txn:TradeToPortfolioRate",
@@ -328,7 +328,7 @@
             "writeControl": 4,
             "value": {
                 "side": "FxExpiry",
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "security": "Txn:LusidInstrumentId",
                 "currency": "Txn:TradeCurrency",
                 "rate": "Txn:TradeToPortfolioRate",
@@ -343,7 +343,7 @@
             "resourceId": "funds_in",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -396,7 +396,7 @@
             "resourceId": "funds_out",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -449,7 +449,7 @@
             "resourceId": "buy",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -545,7 +545,7 @@
             "resourceId": "sell",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -641,7 +641,7 @@
             "resourceId": "cover_short",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -737,7 +737,7 @@
             "resourceId": "sell_short",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -833,7 +833,7 @@
             "resourceId": "buy_future",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -917,7 +917,7 @@
                     },
                     {
                         "type": "DeriveTotalConsideration",
-                        "formula": "Txn:GrossConsideration - Properties[Transaction/FBNTutorials-CDX-CDS-Events/Commission]"
+                        "formula": "Txn:GrossConsideration - Properties[Transaction/FINBOURNE_RECOMMENDED_TXN_TYPES/Commission]"
                     }
                 ]
             },
@@ -934,7 +934,7 @@
             "resourceId": "sell_future",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -1018,7 +1018,7 @@
                     },
                     {
                         "type": "DeriveTotalConsideration",
-                        "formula": "Txn:GrossConsideration - Properties[Transaction/FBNTutorials-CDX-CDS-Events/Commission]"
+                        "formula": "Txn:GrossConsideration - Properties[Transaction/FINBOURNE_RECOMMENDED_TXN_TYPES/Commission]"
                     }
                 ]
             },
@@ -1035,7 +1035,7 @@
             "resourceId": "sell_short_future",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -1119,7 +1119,7 @@
                     },
                     {
                         "type": "DeriveTotalConsideration",
-                        "formula": "Txn:GrossConsideration - Properties[Transaction/FBNTutorials-CDX-CDS-Events/Commission]"
+                        "formula": "Txn:GrossConsideration - Properties[Transaction/FINBOURNE_RECOMMENDED_TXN_TYPES/Commission]"
                     }
                 ]
             },
@@ -1136,7 +1136,7 @@
             "resourceId": "cover_short_future",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -1220,7 +1220,7 @@
                     },
                     {
                         "type": "DeriveTotalConsideration",
-                        "formula": "Txn:GrossConsideration - Properties[Transaction/FBNTutorials-CDX-CDS-Events/Commission]"
+                        "formula": "Txn:GrossConsideration - Properties[Transaction/FINBOURNE_RECOMMENDED_TXN_TYPES/Commission]"
                     }
                 ]
             },
@@ -1237,7 +1237,7 @@
             "resourceId": "buy_protection",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -1328,7 +1328,7 @@
             "resourceId": "sell_protection",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -1419,7 +1419,7 @@
             "resourceId": "prime_transfer_in",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -1460,7 +1460,7 @@
             "resourceId": "prime_transfer_out",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -1501,7 +1501,7 @@
             "resourceId": "fx_booking",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -1537,7 +1537,7 @@
             "resourceId": "fx_spot",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -1587,7 +1587,7 @@
             "resourceId": "dividend_income",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -1641,7 +1641,7 @@
             "resourceId": "dividend_expense",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -1695,7 +1695,7 @@
             "resourceId": "fx_expiry",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -1736,7 +1736,7 @@
             "resourceId": "coupon",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -1790,7 +1790,7 @@
             "resourceId": "bond_principal",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -1846,7 +1846,7 @@
             "resourceId": "maturity",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -1887,7 +1887,7 @@
             "resourceId": "early_redemption",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -1941,7 +1941,7 @@
             "resourceId": "bond_early_redemption_accrued",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -1995,7 +1995,7 @@
             "resourceId": "credit_premium_cash_flow",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -2049,7 +2049,7 @@
             "resourceId": "protection_payout_cash_flow",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -2103,7 +2103,7 @@
             "resourceId": "fee_accrual",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
@@ -2164,7 +2164,7 @@
             "resourceId": "fee_payment",
             "writeControl": 4,
             "value": {
-                "scope": "FBNTutorials-CDX-CDS-Events",
+                "scope": "FINBOURNE_RECOMMENDED_TXN_TYPES",
                 "source": "default",
                 "aliases": [
                     {
